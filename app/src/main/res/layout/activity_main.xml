@@ -28,7 +28,9 @@
             <SearchView
                 android:id="@+id/search"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" />
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
@@ -36,9 +38,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center"
+            >
 
             <ImageView
                 android:id="@+id/favImg"
@@ -50,10 +55,10 @@
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginBottom="8dp"
+                android:layout_marginLeft="7dp"
+                android:layout_toRightOf="@+id/favImg"
                 android:text="@string/search_recipe"
-                android:textSize="@dimen/normal_size"
-                android:layout_toRightOf="@+id/favImg"/>
-        </RelativeLayout>
+                android:textSize="@dimen/normal_size" />
+        </LinearLayout>
     </androidx.cardview.widget.CardView>
 </LinearLayout>
