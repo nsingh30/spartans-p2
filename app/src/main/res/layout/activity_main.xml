@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="7dp"
                 android:layout_toRightOf="@+id/favImg"
-                android:text="@string/search_recipe"
+                android:text="@string/select_fav"
                 android:textSize="@dimen/normal_size" />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
