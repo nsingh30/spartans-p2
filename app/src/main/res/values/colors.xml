@@ -15,4 +15,7 @@
     <color name="heart_background_color">@color/app_background_color</color>
     <color name="app_background_color">#F0F3F8</color>
     <color name="ic_recipe_foreground">@color/teal_700</color>
+    <color name="btn_primary">@color/teal_700</color>
+    <color name="btn_reset">#015048</color>
+    <color name="btn_cancel">@color/red</color>
 </resources>
