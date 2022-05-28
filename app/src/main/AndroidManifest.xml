@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectP0">
         <activity
+            android:name=".NewRecipeForm"
+            android:exported="false" />
+        <activity
             android:name=".FavoritesList"
             android:exported="false" />
         <activity

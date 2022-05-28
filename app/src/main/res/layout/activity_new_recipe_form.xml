@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewRecipeForm">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/card_margin"
+        android:layout_marginTop="@dimen/card_margin"
+        android:layout_marginEnd="@dimen/card_margin"
+        android:layout_marginBottom="@dimen/card_margin"
+        app:cardBackgroundColor="@color/card_view"
+        app:cardCornerRadius="@dimen/card_corner_radius">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/form_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Add New Recipe"
+                android:textColor="@color/primary_text_color"
+                android:textSize="@dimen/text_large"
+                android:textStyle="bold" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/form_name"
+                android:layout_margin="@dimen/card_margin"
+                android:hint="Title">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/app_background_color" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/title"-->
+    <!--        android:textSize="@dimen/field_text_font_size"-->
+    <!--        android:textStyle="bold" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/title"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginBottom="@dimen/field_margin_bottom" />-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/yield"-->
+    <!--        android:textSize="@dimen/field_text_font_size"-->
+    <!--        android:textStyle="bold" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/yield"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_marginBottom="@dimen/field_margin_bottom" />-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginRight="90dp"-->
+    <!--            android:text="@string/prep_time"-->
+    <!--            android:textSize="@dimen/field_text_font_size"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginLeft="80dp"-->
+    <!--            android:text="@string/total_time"-->
+    <!--            android:textSize="@dimen/field_text_font_size"-->
+    <!--            android:textStyle="bold" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal">-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/prep_time"-->
+    <!--            android:layout_width="@dimen/edit_text_small"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginBottom="@dimen/field_margin_bottom" />-->
+
+    <!--        <EditText-->
+    <!--            android:id="@+id/total_time"-->
+    <!--            android:layout_width="@dimen/edit_text_small"-->
+    <!--            android:layout_height="match_parent"-->
+    <!--            android:layout_marginLeft="90dp"-->
+    <!--            android:layout_marginBottom="@dimen/field_margin_bottom" />-->
+    <!--    </LinearLayout>-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/Ingredients"-->
+    <!--        android:textSize="@dimen/field_text_font_size"-->
+    <!--        android:textStyle="bold" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/ingredients"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:ems="10"-->
+    <!--        android:gravity="start|top"-->
+    <!--        android:inputType="textMultiLine" />-->
+
+    <!--    <TextView-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:text="@string/directions"-->
+    <!--        android:textSize="@dimen/field_text_font_size"-->
+    <!--        android:textStyle="bold" />-->
+
+    <!--    <EditText-->
+    <!--        android:id="@+id/directions"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_weight="1"-->
+    <!--        android:ems="10"-->
+    <!--        android:gravity="start|top"-->
+    <!--        android:inputType="textMultiLine" />-->
+
+    <!--    <LinearLayout-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:gravity="center">-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/btn_submit"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="submit"-->
+    <!--            android:layout_marginRight="40dp"/>-->
+
+    <!--        <Button-->
+    <!--            android:id="@+id/btn_cancel"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="cancel"/>-->
+
+    <!--    </LinearLayout>-->
+
+</RelativeLayout>

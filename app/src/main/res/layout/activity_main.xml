@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/app_background"
+    android:background="@color/app_background_color"
     tools:context=".MainActivity">
 
     <androidx.cardview.widget.CardView
@@ -28,15 +28,15 @@
                 android:layout_marginBottom="8dp"
                 android:layout_marginLeft="10dp"
                 android:text="@string/search_recipe"
-                android:textSize="@dimen/large_text"
-                android:textColor="@color/text_color"/>
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/primary_text_color"/>
 
             <androidx.appcompat.widget.SearchView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_marginBottom="8dp"
                 app:iconifiedByDefault="false"
-                android:outlineAmbientShadowColor="@color/text_color"
+                android:outlineAmbientShadowColor="@color/primary_text_color"
                 />
         </LinearLayout>
     </androidx.cardview.widget.CardView>
@@ -68,8 +68,8 @@
                 android:layout_marginLeft="7dp"
                 android:layout_toRightOf="@+id/favImg"
                 android:text="@string/select_fav"
-                android:textSize="@dimen/large_text"
-                android:textColor="@color/text_color"/>
+                android:textSize="@dimen/text_large"
+                android:textColor="@color/primary_text_color"/>
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
