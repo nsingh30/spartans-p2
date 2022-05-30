@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,10 +9,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="@dimen/card_form_margin"
-        android:layout_marginTop="@dimen/card_form_margin"
-        android:layout_marginEnd="@dimen/card_form_margin"
-        android:layout_marginBottom="@dimen/card_form_margin"
+        android:layout_margin="@dimen/margin_card_Large"
         app:cardBackgroundColor="@color/card_view"
         app:cardCornerRadius="@dimen/card_corner_radius">
 
@@ -20,7 +17,6 @@
             android:id="@+id/text_input_layout_ing_dir"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:gravity="center"
             android:orientation="vertical">
 
             <TextView
@@ -29,7 +25,7 @@
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 android:text="Add New Recipe"
-                android:textColor="@color/primary_text_color"
+                android:textColor="@color/text_color_primary"
                 android:textSize="@dimen/text_large"
                 android:textStyle="bold" />
 
@@ -37,7 +33,7 @@
                 android:id="@+id/text_input_layout_title"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/card_margin"
+                android:layout_margin="@dimen/margin_card_medium"
                 android:hint="Title">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -52,8 +48,7 @@
                 android:id="@+id/text_input_layout_yield"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/text_input_layout_title"
-                android:layout_margin="@dimen/card_margin"
+                android:layout_margin="@dimen/margin_card_medium"
                 android:hint="Yield">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -68,15 +63,13 @@
                 android:id="@+id/layout_cook_time"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/text_input_layout_yield"
                 android:orientation="horizontal">
 
                 <com.google.android.material.textfield.TextInputLayout
                     android:id="@+id/text_input_layout_prep_time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_input_layout_yield"
-                    android:layout_margin="@dimen/card_margin"
+                    android:layout_margin="@dimen/margin_card_medium"
                     android:layout_weight="1"
                     android:hint="Prep Time">
 
@@ -91,8 +84,7 @@
                     android:id="@+id/text_input_layout_total_time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/text_input_layout_yield"
-                    android:layout_margin="@dimen/card_margin"
+                    android:layout_margin="@dimen/margin_card_medium"
                     android:layout_weight="1"
                     android:hint="Total Time">
 
@@ -108,7 +100,7 @@
                 android:id="@+id/text_input_layout_ingredients"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/card_margin"
+                android:layout_margin="@dimen/margin_card_medium"
                 android:layout_weight="1"
                 android:hint="Ingredients">
 
@@ -117,7 +109,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/app_background_color"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:gravity="top"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -125,7 +118,7 @@
                 android:id="@+id/text_input_layout_directions"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/card_margin"
+                android:layout_margin="@dimen/margin_card_medium"
                 android:layout_weight="1"
                 android:hint="Directions">
 
@@ -142,7 +135,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/text_input_layout_ing_dir"
-                android:gravity="center"
+                android:gravity="top"
                 android:orientation="horizontal">
 
                 <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
@@ -164,7 +157,7 @@
                     android:layout_weight="1"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:text="submit" />
+                    android:text="add" />
 
                 <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                     android:id="@+id/btn_cancel"
@@ -180,4 +173,4 @@
 
         </LinearLayout>
     </androidx.cardview.widget.CardView>
-</RelativeLayout>
+</LinearLayout>

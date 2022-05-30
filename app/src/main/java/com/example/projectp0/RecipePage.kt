@@ -5,14 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
-class NewRecipeForm : AppCompatActivity() {
+class RecipePage : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_new_recipe_form)
+        setContentView(R.layout.activity_recipe_page)
 
-        val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_submit)
-        btnSubmit.setOnClickListener{
-            val intent = Intent(this,RecipePage::class.java)
+        val btnHome : ExtendedFloatingActionButton = findViewById(R.id.btn_home)
+        btnHome.setOnClickListener{
+            val intent : Intent =  Intent (this, MainActivity:: class.java)
             startActivity(intent)
         }
     }

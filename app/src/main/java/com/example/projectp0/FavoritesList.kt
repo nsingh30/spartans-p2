@@ -3,6 +3,7 @@ package com.example.projectp0
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import android.widget.Button
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
@@ -17,6 +18,11 @@ class FavoritesList : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val linkFavList: View = findViewById(R.id.card_view_recipe)
+        linkFavList.setOnClickListener{
+            val intent = Intent(this, RecipePage::class.java)
+            startActivity(intent)
+        }
 
     }
 }
