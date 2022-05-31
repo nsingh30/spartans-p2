@@ -22,4 +22,7 @@ interface RecipeDao {
 
     @Query("delete from recipes")
     fun deleteAll()
+
+    @Query("select * from recipes where title like :search")
+    fun findRecipeWithTitle(search: String): List<Recipe>
 }
