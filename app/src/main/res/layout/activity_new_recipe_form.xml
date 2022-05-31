@@ -119,7 +119,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:backgroundTint="@color/app_background_color"
-                    android:inputType="textMultiLine" />
+                    android:inputType="textMultiLine"
+                    android:gravity="top"/>
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout

@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(app: Application): AndroidViewModel(app) {
     private val repo: RecipeRepository
-    private val allRecipes : LiveData<List<Recipe>>?
+    val allRecipes : LiveData<List<Recipe>>?
 
     init {
         repo = RecipeRepository(app)

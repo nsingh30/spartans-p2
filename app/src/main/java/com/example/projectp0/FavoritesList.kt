@@ -3,38 +3,53 @@ package com.example.projectp0
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import android.widget.TextView
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
-import org.w3c.dom.Text
 
 class FavoritesList : AppCompatActivity() {
+
+    var recipeList = ArrayList<Recipe>()
+    lateinit var mainViewModel: MainViewModel
+    lateinit var recipeAdapter: RecipeAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favorites_list)
+
+        mainViewModel = MainViewModel((application))
+
+        mainViewModel.allRecipes?.observe(this) { recipeList ->
+            getRecipes(recipeList)
+        }
+
+        var recyclerView : RecyclerView = findViewById(R.id.recycler_view)
+
+        recyclerView.layoutManager = LinearLayoutManager(this)
+
+        // create an adapter
+        recipeAdapter = RecipeAdapter({ position -> onCardClick(position) }, recipeList)
+
+
+        // take the views adapter then assign it to the custom adapter we created
+         recyclerView.adapter = recipeAdapter
 
         val btnAdd : FloatingActionButton = findViewById(R.id.btn_add)
         btnAdd.setOnClickListener(){
             val intent = Intent(this, NewRecipeForm:: class.java)
             startActivity(intent)
         }
+    }
 
-        var linkFavList: View = findViewById(R.id.card_view_recipe)
-//        var id: TextView = findViewById(R.id.id)
-        var title: TextView = findViewById(R.id.title)
-//        var rYield: TextView = findViewById(R.id.r_yield)
-//        var prepTime: TextView = findViewById(R.id.prep_time)
-//        var totalTime: TextView = findViewById(R.id.total_time)
+    private fun onCardClick(position: Int) {
+        val myIntent = Intent(this, RecipePage::class.java)
+        myIntent.putExtra("title", recipeList[position].title)
+        startActivity(myIntent)
+    }
 
-        var titleStr : String = title.text.toString()
-
-        linkFavList.setOnClickListener{
-            val intent = Intent(this, RecipePage::class.java)
-//            println("titleStr:: ${titleStr}")
-            intent.putExtra("title", titleStr)
-            startActivity(intent)
-        }
-
+    private fun getRecipes(recipeList: List<Recipe>){
+        this.recipeList.clear()
+        this.recipeList.addAll(recipeList)
+        recipeAdapter.notifyDataSetChanged()
     }
 }
