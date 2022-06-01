@@ -9,7 +9,7 @@
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_margin="@dimen/margin_card_Large"
+        android:layout_margin="@dimen/margin_card_large"
         app:cardBackgroundColor="@color/card_view"
         app:cardCornerRadius="@dimen/card_corner_radius">
 
@@ -36,9 +36,11 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_title"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:backgroundTint="@color/app_background_color" />
+                    android:backgroundTint="@color/app_background_color"
+                    app:errorEnabled="true"/>
 
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -50,6 +52,7 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_yield"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/app_background_color" />
@@ -112,7 +115,8 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin_card_medium"
                 android:layout_weight="1"
-                android:hint="Directions">
+                android:hint="Directions"
+                android:gravity="top">
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_directions"
@@ -131,13 +135,13 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                    android:id="@+id/btn_clear"
+                    android:id="@+id/btn_cancel"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/btn_reset"
-                    android:text="clear"
+                    android:backgroundTint="@color/btn_cancel"
+                    android:text="cancel"
                     android:textAlignment="center"
                     android:textColor="@color/white" />
 
@@ -152,13 +156,13 @@
                     android:text="add" />
 
                 <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
-                    android:id="@+id/btn_cancel"
+                    android:id="@+id/btn_clear"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:backgroundTint="@color/btn_cancel"
-                    android:text="cancel"
+                    android:backgroundTint="@color/btn_reset"
+                    android:text="clear"
                     android:textAlignment="center"
                     android:textColor="@color/white" />
             </LinearLayout>

@@ -27,6 +27,11 @@ class RecipeRepository (context: Context){
         db?.deleteAll()
     }
 
+    fun findRecipeWithId(search: String): List<Recipe> {
+
+        return db?.findRecipeWithId(search)!!
+    }
+
     fun findRecipeWithTitle(search: String): List<Recipe> {
 
         return db?.findRecipeWithTitle(search)!!

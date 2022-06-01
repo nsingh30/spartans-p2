@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="text_medium">16sp</dimen>
+    <dimen name="text_medium">20sp</dimen>
     <dimen name="text_large">25sp</dimen>
     <dimen name="text_small">12sp</dimen>
     <dimen name="text_list_medium">25sp</dimen>
@@ -8,7 +8,7 @@
     <dimen name="text_list_small">14sp</dimen>
     <dimen name="margin_card_small">8dp</dimen>
     <dimen name="margin_card_medium">10dp</dimen>
-    <dimen name="margin_card_Large">20dp</dimen>
+    <dimen name="margin_card_large">20dp</dimen>
     <dimen name="margin_text_small">2sp</dimen>
     <dimen name="card_corner_radius">10dp</dimen>
     <dimen name="image_size">100dp</dimen>

@@ -25,7 +25,7 @@ class NewRecipeForm : AppCompatActivity() {
             var recipe : Recipe = makeRecipe()
             vm.insertRecipes(recipe)
 
-            intent.putExtra("title", recipe.title)
+            intent.putExtra("id", recipe.recipeId.toString())
             startActivity(intent)
         }
     }
