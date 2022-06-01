@@ -44,12 +44,20 @@
                             android:textSize="@dimen/text_small" />
 
                         <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="@string/zero_padding"
+                            android:textColor="@color/text_color_tertiary"
+                            android:textSize="@dimen/text_small" />
+
+                        <TextView
                             android:id="@+id/id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:layout_weight="1"
-                            android:text="22222222"
+                            android:text="###"
                             android:textColor="@color/text_color_tertiary"
                             android:textSize="@dimen/text_small" />
 
@@ -213,6 +221,17 @@
                 android:orientation="horizontal">
 
                 <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/btn_delete"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:backgroundTint="@color/btn_cancel"
+                    android:text="delete"
+                    android:textAlignment="center"
+                    android:textColor="@color/white" />
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                     android:id="@+id/btn_edit"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
@@ -229,8 +248,8 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
                     android:layout_weight="1"
-                    android:text="home"
                     android:backgroundTint="@color/btn_primary"
+                    android:text="home"
                     android:textAlignment="center"
                     android:textColor="@color/white" />
             </LinearLayout>

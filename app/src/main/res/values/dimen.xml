@@ -3,9 +3,9 @@
     <dimen name="text_medium">20sp</dimen>
     <dimen name="text_large">25sp</dimen>
     <dimen name="text_small">12sp</dimen>
-    <dimen name="text_list_medium">25sp</dimen>
-    <dimen name="text_list_large">30sp</dimen>
-    <dimen name="text_list_small">14sp</dimen>
+    <dimen name="text_list_medium">20sp</dimen>
+    <dimen name="text_list_large">25sp</dimen>
+    <dimen name="text_list_small">16sp</dimen>
     <dimen name="margin_card_small">8dp</dimen>
     <dimen name="margin_card_medium">10dp</dimen>
     <dimen name="margin_card_large">20dp</dimen>

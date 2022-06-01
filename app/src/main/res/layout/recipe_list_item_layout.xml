@@ -1,60 +1,68 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
 
-    android:backgroundTint="@color/card_view"
     android:id="@+id/card_view_recipe"
+    android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="@dimen/margin_card_medium"
-    android:layout_marginEnd="@dimen/margin_card_medium"
     android:layout_marginStart="@dimen/margin_card_medium"
     android:layout_marginTop="@dimen/margin_card_medium"
-    android:layout_width="match_parent"
+    android:layout_marginEnd="@dimen/margin_card_medium"
+    android:layout_marginBottom="@dimen/margin_card_medium"
+    android:backgroundTint="@color/card_view"
     app:cardCornerRadius="@dimen/card_corner_radius">
 
     <LinearLayout
         android:id="@+id/list_item"
-        android:layout_height="wrap_content"
         android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:orientation="horizontal">
 
         <ImageView
-            android:background="@color/app_background_color"
             android:id="@+id/food_thumbnail"
+            android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
             android:layout_margin="@dimen/margin_card_small"
-            android:layout_width="@dimen/image_size"
+            android:background="@color/app_background_color"
             android:src="@drawable/ic_star" />
 
         <LinearLayout
-            android:layout_height="match_parent"
-            android:layout_marginBottom="@dimen/margin_card_small"
-            android:layout_marginTop="@dimen/margin_card_small"
             android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/margin_card_small"
+            android:layout_marginBottom="@dimen/margin_card_small"
             android:orientation="vertical">
 
             <LinearLayout
-                android:layout_height="wrap_content"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
                 android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/title"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/margin_text_small"
                     android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginBottom="@dimen/margin_text_small"
                     android:text="Adriana's Recipe"
                     android:textColor="@color/text_color_primary"
                     android:textSize="@dimen/text_list_medium"
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/id"
+                    android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_width="match_parent"
+                    android:text="@string/zero_padding"
+                    android:textAlignment="viewEnd"
+                    android:textColor="@color/text_color_tertiary"
+                    android:textSize="@dimen/text_list_small" />
+
+                <TextView
+                    android:id="@+id/id"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
                     android:layout_marginEnd="@dimen/margin_card_medium"
-                    android:text="#####"
+                    android:text="##"
                     android:textAlignment="viewEnd"
                     android:textColor="@color/text_color_tertiary"
                     android:textSize="@dimen/text_list_small" />
@@ -62,28 +70,27 @@
 
             <TextView
                 android:id="@+id/prep_time"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_text_small"
-                android:layout_width="wrap_content"
                 android:text="Prep Time"
                 android:textColor="@color/text_color_secondary"
                 android:textSize="@dimen/text_list_small" />
 
             <TextView
                 android:id="@+id/total_time"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_text_small"
                 android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
                 android:text="Total Time"
                 android:textColor="@color/text_color_secondary"
                 android:textSize="@dimen/text_list_small" />
 
             <TextView
                 android:id="@+id/r_yield"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/margin_text_small"
-                android:layout_marginRight="@dimen/margin_card_medium"
                 android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/margin_card_medium"
+                android:layout_marginBottom="@dimen/margin_text_small"
                 android:text="Yield"
                 android:textAlignment="viewEnd"
                 android:textColor="@color/text_color_secondary"

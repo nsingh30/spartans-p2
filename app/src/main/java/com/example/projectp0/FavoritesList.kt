@@ -3,6 +3,7 @@ package com.example.projectp0
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -18,12 +19,11 @@ class FavoritesList : AppCompatActivity() {
         setContentView(R.layout.activity_favorites_list)
 
         mainViewModel = MainViewModel((application))
-
         mainViewModel.allRecipes?.observe(this) { recipeList ->
             getRecipes(recipeList)
         }
 
-        var recyclerView : RecyclerView = findViewById(R.id.recycler_view)
+        var recyclerView: RecyclerView = findViewById(R.id.recycler_view)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -32,11 +32,11 @@ class FavoritesList : AppCompatActivity() {
 
 
         // take the views adapter then assign it to the custom adapter we created
-         recyclerView.adapter = recipeAdapter
+        recyclerView.adapter = recipeAdapter
 
-        val btnAdd : FloatingActionButton = findViewById(R.id.btn_add)
-        btnAdd.setOnClickListener(){
-            val intent = Intent(this, NewRecipeForm:: class.java)
+        val btnAdd: FloatingActionButton = findViewById(R.id.btn_add)
+        btnAdd.setOnClickListener() {
+            val intent = Intent(this, NewRecipeForm::class.java)
             startActivity(intent)
         }
     }
@@ -47,7 +47,7 @@ class FavoritesList : AppCompatActivity() {
         startActivity(myIntent)
     }
 
-    private fun getRecipes(recipeList: List<Recipe>){
+    private fun getRecipes(recipeList: List<Recipe>) {
         this.recipeList.clear()
         this.recipeList.addAll(recipeList)
         recipeAdapter.notifyDataSetChanged()

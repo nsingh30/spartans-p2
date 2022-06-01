@@ -1,34 +1,35 @@
 package com.example.projectp0
 
+import android.content.DialogInterface
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.text.Editable
-import android.view.View
 import android.widget.EditText
+import android.widget.Toast
+import androidx.appcompat.app.AlertDialog
+import androidx.appcompat.app.AppCompatActivity
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class NewRecipeForm : AppCompatActivity() {
 
-    lateinit var vm : MainViewModel
+    lateinit var vm: MainViewModel
 
-    private lateinit var title : EditText
-    private lateinit var rYield : EditText
-    private lateinit var prepTime : EditText
-    private lateinit var totalTime : EditText
-    private lateinit var ingredients : EditText
-    private lateinit var directions : EditText
+    private lateinit var title: EditText
+    private lateinit var rYield: EditText
+    private lateinit var prepTime: EditText
+    private lateinit var totalTime: EditText
+    private lateinit var ingredients: EditText
+    private lateinit var directions: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_recipe_form)
 
-        val title : EditText = findViewById(R.id.edit_text_title)
-        val rYield : EditText = findViewById(R.id.edit_text_yield)
-        val prepTime : EditText = findViewById(R.id.edit_text_prep_time)
-        val totalTime : EditText = findViewById(R.id.edit_text_total_time)
-        val ingredients : EditText = findViewById(R.id.edit_text_ingredients)
-        val directions : EditText = findViewById(R.id.edit_text_directions)
+        title = findViewById(R.id.edit_text_title)
+        rYield = findViewById(R.id.edit_text_yield)
+        prepTime = findViewById(R.id.edit_text_prep_time)
+        totalTime = findViewById(R.id.edit_text_total_time)
+        ingredients = findViewById(R.id.edit_text_ingredients)
+        directions = findViewById(R.id.edit_text_directions)
 
         vm = MainViewModel(application)
 
@@ -36,31 +37,87 @@ class NewRecipeForm : AppCompatActivity() {
         val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
         val btnCancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
 
-        btnSubmit.setOnClickListener{
-            val intent = Intent(this,RecipePage::class.java)
 
-            val recipe = Recipe(null, title.text.toString(), rYield.text.toString(),
-                prepTime.text.toString(), totalTime.text.toString(), ingredients.text.toString(),
-                directions.text.toString())
+        btnSubmit.setOnClickListener {
 
-            vm.insertRecipes(recipe)
+            val title: String = title.text.toString()
+            val rYield: String = rYield.text.toString()
+            val prepTime: String = prepTime.text.toString()
+            val totalTime: String = totalTime.text.toString()
+            val ingredients: String = ingredients.text.toString()
+            val directions: String = directions.text.toString()
 
-            intent.putExtra("title", recipe.title.toString())
-            startActivity(intent)
+            if (title.isNullOrBlank() || rYield.isNullOrBlank() || prepTime.isNullOrBlank() ||
+                totalTime.isNullOrBlank() || ingredients.isNullOrBlank() ||
+                directions.isNullOrBlank()
+            ) {
+                if(title.isNullOrBlank())
+                    this.title.setError("Please Enter a recipe title")
+                if(rYield.isNullOrBlank())
+                    this.rYield.setError("Please Enter number of servings")
+                if(prepTime.isNullOrBlank())
+                    this.prepTime.setError("Please Enter time it takes to prep ingredients")
+                if(totalTime.isNullOrBlank())
+                    this.totalTime.setError("Please Enter prep time + cook time")
+                if(ingredients.isNullOrBlank())
+                    this.ingredients.setError("Please the ingredient list")
+                if(directions.isNullOrBlank())
+                    this.directions.setError("Please Enter cooking steps")
+
+                val builder = AlertDialog.Builder(this)
+                // Set Alert Title
+                builder.setTitle("All fields are required")
+                // Set the message show for the Alert time
+                builder.setMessage("Please complete the form")
+                builder.setCancelable(true)
+                builder.setNegativeButton("OK", DialogInterface.OnClickListener
+                { dialog, which -> dialog.cancel()})
+
+                val alertDialog: AlertDialog = builder.create()
+                alertDialog.show()
+
+            } else {
+
+                val recipe = Recipe(
+                    null,
+                    title,
+                    rYield,
+                    prepTime,
+                    totalTime,
+                    ingredients,
+                    directions,
+                )
+
+                vm.insertRecipes(recipe)
+
+                val intent = Intent(this, FavoritesList::class.java)
+                intent.putExtra("title", recipe.title.toString())
+                startActivity(intent)
+
+                val message = "recipe successfully added"
+                val duration = Toast.LENGTH_LONG
+                val toast = Toast.makeText(applicationContext, message, duration)
+                toast.show()
+            }
         }
 
-        btnClear.setOnClickListener{
+        btnCancel.setOnClickListener {
+            val intent = Intent(this, FavoritesList::class.java)
+            startActivity(intent)
+
+            val message = "cancelled"
+            val duration = Toast.LENGTH_LONG
+            val toast = Toast.makeText(applicationContext, message, duration)
+            toast.show()
+        }
+
+        btnClear.setOnClickListener {
             title.text.clear()
             rYield.text.clear()
             prepTime.text.clear()
             totalTime.text.clear()
             ingredients.text.clear()
             directions.text.clear()
-        }
-
-        btnCancel.setOnClickListener{
-            val intent: Intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
         }
     }
 }

@@ -16,14 +16,4 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
     }
-
-//    private fun onCardClick(position: Int) {
-//        println("Position:::$position")
-//        val myIntent = Intent(this, StudentDetail::class.java)
-//        myIntent.putExtra("Id", studentList[position].studentId)
-//        myIntent.putExtra("Fname", studentList[position].firstName)
-//        myIntent.putExtra("Lname", studentList[position].lastName)
-//        startActivity(myIntent)
-//    }
-//
 }

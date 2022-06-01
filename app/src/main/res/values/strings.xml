@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">RECIPE GENIE</string>
     <string name="search_recipe">Search a Recipe</string>
-    <string name="select_fav">Select from Favorites</string>
+    <string name="select_fav">Cick here to view your recipes</string>
     <string name="lorem_ipsum">Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas
         condimentum ante ligula. Duis non est orci. Nunc pellentesque erat sed cursus vestibulum.
         In aliquam accumsan massa non aliquam. Donec nisl arcu, fringilla sit amet pulvinar eu,
@@ -10,4 +10,5 @@
     <string name="lorem_ipsum_short">Lorem ipsum dolor sit amet,consectetur adipiscing elit. Maecenas
         condimentum ante ligula. Duis non est orci. Nunc pellentesque erat sed cursus vestibulum.
         In aliquam accumsan massa non aliquam.</string>
+    <string name="zero_padding">00</string>
 </resources>
