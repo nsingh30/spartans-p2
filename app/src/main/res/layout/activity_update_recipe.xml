@@ -240,8 +240,8 @@ tools:context=".UpdateRecipe">
         android:layout_height="wrap_content"
         android:layout_margin="5dp"
         android:layout_weight="1"
-        android:backgroundTint="@color/btn_reset"
-        android:text="edit"
+        android:backgroundTint="@color/btn_cancel"
+        android:text="cancel"
         android:textAlignment="center"
         android:textColor="@color/white" />
 
@@ -253,6 +253,7 @@ tools:context=".UpdateRecipe">
         android:layout_weight="1"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:text="home" />
+        android:backgroundTint="@color/btn_primary"
+        android:text="update" />
 </LinearLayout>
 </LinearLayout>

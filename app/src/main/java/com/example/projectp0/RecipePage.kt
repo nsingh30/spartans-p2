@@ -24,7 +24,7 @@ class RecipePage : AppCompatActivity() {
         val btnEdit: ExtendedFloatingActionButton = findViewById(R.id.btn_edit)
         btnEdit.setOnClickListener {
             val intent: Intent = Intent(this, UpdateRecipe::class.java)
-            intent.putExtra("id", recipeID)
+            intent.putExtra("title", title)
             startActivity(intent)
         }
     }

@@ -12,36 +12,55 @@ class NewRecipeForm : AppCompatActivity() {
 
     lateinit var vm : MainViewModel
 
+    private lateinit var title : EditText
+    private lateinit var rYield : EditText
+    private lateinit var prepTime : EditText
+    private lateinit var totalTime : EditText
+    private lateinit var ingredients : EditText
+    private lateinit var directions : EditText
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_recipe_form)
 
+        val title : EditText = findViewById(R.id.edit_text_title)
+        val rYield : EditText = findViewById(R.id.edit_text_yield)
+        val prepTime : EditText = findViewById(R.id.edit_text_prep_time)
+        val totalTime : EditText = findViewById(R.id.edit_text_total_time)
+        val ingredients : EditText = findViewById(R.id.edit_text_ingredients)
+        val directions : EditText = findViewById(R.id.edit_text_directions)
+
         vm = MainViewModel(application)
 
         val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_submit)
+        val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
+        val btnCancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
+
         btnSubmit.setOnClickListener{
             val intent = Intent(this,RecipePage::class.java)
 
-            var recipe : Recipe = makeRecipe()
+            val recipe = Recipe(null, title.text.toString(), rYield.text.toString(),
+                prepTime.text.toString(), totalTime.text.toString(), ingredients.text.toString(),
+                directions.text.toString())
+
             vm.insertRecipes(recipe)
 
-            intent.putExtra("id", recipe.recipeId.toString())
+            intent.putExtra("title", recipe.title.toString())
             startActivity(intent)
         }
-    }
 
-    private fun makeRecipe() : Recipe {
-        val title : String = editTextToString(findViewById(R.id.edit_text_title))
-        val rYield : String = editTextToString(findViewById(R.id.edit_text_yield))
-        val prepTime : String = editTextToString(findViewById(R.id.edit_text_prep_time))
-        val totalTime : String = editTextToString(findViewById(R.id.edit_text_total_time))
-        val ingredients : String = editTextToString(findViewById(R.id.edit_text_ingredients))
-        val directions : String = editTextToString(findViewById(R.id.edit_text_directions))
+        btnClear.setOnClickListener{
+            title.text.clear()
+            rYield.text.clear()
+            prepTime.text.clear()
+            totalTime.text.clear()
+            ingredients.text.clear()
+            directions.text.clear()
+        }
 
-        return Recipe(null, title, rYield, prepTime, totalTime, ingredients, directions)
-    }
-
-    private fun editTextToString(item:EditText): String{
-        return item.text.toString()
+        btnCancel.setOnClickListener{
+            val intent: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
     }
 }
