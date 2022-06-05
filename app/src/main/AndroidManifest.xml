@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.projectp0">
+    package="com.example.recipegenie">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
@@ -12,19 +12,19 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.ProjectP0">
         <activity
-            android:name=".UpdateRecipe"
+            android:name="com.example.recipegenie.UpdateRecipe"
             android:exported="false" />
         <activity
-            android:name=".RecipePage"
+            android:name="com.example.recipegenie.RecipePage"
             android:exported="false" />
         <activity
-            android:name=".NewRecipeForm"
+            android:name="com.example.recipegenie.NewRecipeForm"
             android:exported="false" />
         <activity
-            android:name=".FavoritesList"
+            android:name="com.example.recipegenie.FavoritesList"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.recipegenie.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

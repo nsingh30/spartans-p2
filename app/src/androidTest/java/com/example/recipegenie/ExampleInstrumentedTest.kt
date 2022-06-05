@@ -1,4 +1,4 @@
-package com.example.projectp0
+package com.example.recipegenie
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4
