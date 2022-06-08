@@ -1,8 +1,7 @@
-package com.example.projectp0
+package com.example.recipegenie
 
 import android.content.Context
 import androidx.lifecycle.LiveData
-import androidx.room.Query
 
 class RecipeRepository (context: Context){
     var db:RecipeDao? = AppDatabase.getInstance(context)?.recipeDao()

@@ -1,4 +1,4 @@
-package com.example.projectp0
+package com.example.recipegenie
 
 import android.view.LayoutInflater
 import android.view.View

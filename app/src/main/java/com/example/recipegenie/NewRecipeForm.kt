@@ -1,4 +1,4 @@
-package com.example.projectp0
+package com.example.recipegenie
 
 import android.content.DialogInterface
 import android.content.Intent

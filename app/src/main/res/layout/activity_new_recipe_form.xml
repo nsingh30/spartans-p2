@@ -36,9 +36,8 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_title"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
                     android:backgroundTint="@color/app_background_color"
                     android:inputType=""/>
 
@@ -52,7 +51,6 @@
 
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/edit_text_yield"
-                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:backgroundTint="@color/app_background_color" />

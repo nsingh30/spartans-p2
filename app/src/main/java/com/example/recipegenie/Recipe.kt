@@ -1,9 +1,8 @@
-package com.example.projectp0
+package com.example.recipegenie
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
-import com.google.gson.JsonArray
 
 @Entity(tableName = "recipes")
 data class Recipe(@PrimaryKey(autoGenerate = true) var recipeId: Int?,
