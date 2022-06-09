@@ -7,7 +7,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
 class RecipeAdapter (private val onCardClick: (position: Int) -> Unit,
-                    private val studentList: List<Recipe>)
+                    private val recipeList: List<Recipe>)
                     : RecyclerView.Adapter<RecipeAdapter.ViewHolder>() {
 
     override fun getItemId(position: Int): Long {
@@ -17,14 +17,14 @@ class RecipeAdapter (private val onCardClick: (position: Int) -> Unit,
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         // inflate a view and return it
         var viewInflater = LayoutInflater.from(parent.context)
-            .inflate(R.layout.recipe_list_item_layout, parent, false)
+            .inflate(R.layout.category_card_layout, parent, false)
 
         return ViewHolder(viewInflater, onCardClick)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         // add current item to the holder
-        val recipe = studentList[position]
+        val recipe = recipeList[position]
         holder.idTextView.text = recipe.recipeId.toString()
         holder.titleTextView.text = recipe.title
         holder.yieldTextView.text = recipe.rYield
@@ -33,7 +33,7 @@ class RecipeAdapter (private val onCardClick: (position: Int) -> Unit,
     }
 
     override fun getItemCount(): Int {
-        return studentList.size
+        return recipeList.size
     }
 
     class ViewHolder (view: View, private val onCardClick: (position: Int) -> Unit)
