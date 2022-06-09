@@ -5,26 +5,28 @@
     android:id="@+id/card_view_recipe"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginStart="@dimen/margin_card_medium"
-    android:layout_marginTop="@dimen/margin_card_medium"
-    android:layout_marginEnd="@dimen/margin_card_medium"
-    android:layout_marginBottom="@dimen/margin_card_medium"
-    android:backgroundTint="@color/card_view"
-    app:cardCornerRadius="@dimen/card_corner_radius">
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:layout_marginTop="5dp"
+    android:layout_marginBottom="5dp"
+    app:cardElevation="6dp"
+    app:cardCornerRadius="20dp"
+    >
 
     <LinearLayout
         android:id="@+id/list_item"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:background="@drawable/card_2_background">
 
         <ImageView
             android:id="@+id/food_thumbnail"
             android:layout_width="@dimen/image_size"
             android:layout_height="@dimen/image_size"
             android:layout_margin="@dimen/margin_card_small"
-            android:background="@color/app_background_color"
-            android:src="@drawable/ic_star" />
+
+            android:src=""/>
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -44,58 +46,90 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:layout_marginBottom="@dimen/margin_text_small"
-                    android:text="Adriana's Recipe"
-                    android:textColor="@color/text_color_primary"
+                    android:text="Item Name"
+                    android:textColor="@color/white"
                     android:textSize="@dimen/text_list_medium"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/zero_padding"
-                    android:textAlignment="viewEnd"
-                    android:textColor="@color/text_color_tertiary"
-                    android:textSize="@dimen/text_list_small" />
 
                 <TextView
                     android:id="@+id/id"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:layout_marginEnd="@dimen/margin_card_medium"
+                    android:layout_marginRight="20dp"
                     android:text="##"
                     android:textAlignment="viewEnd"
-                    android:textColor="@color/text_color_tertiary"
+                    android:textColor="@color/title_color"
                     android:textSize="@dimen/text_list_small" />
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
             <TextView
-                android:id="@+id/prep_time"
+
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/margin_text_small"
-                android:text="Prep Time"
-                android:textColor="@color/text_color_secondary"
+                android:text="Total Time: "
+                android:textColor="@color/title_color"
                 android:textSize="@dimen/text_list_small" />
-
-            <TextView
-                android:id="@+id/total_time"
+                <TextView
+                    android:id="@+id/total_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text_small"
+                    android:layout_marginLeft="5dp"
+                    android:text="####"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_list_small" />
+            </LinearLayout>
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Total Time"
-                android:textColor="@color/text_color_secondary"
-                android:textSize="@dimen/text_list_small" />
-
+                android:orientation="horizontal"
+                >
             <TextView
-                android:id="@+id/r_yield"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginRight="@dimen/margin_card_medium"
-                android:layout_marginBottom="@dimen/margin_text_small"
-                android:text="Yield"
-                android:textAlignment="viewEnd"
-                android:textColor="@color/text_color_secondary"
+                android:text="Prep Time: "
+                android:textColor="@color/title_color"
                 android:textSize="@dimen/text_list_small" />
-        </LinearLayout>
+                <TextView
+                    android:id="@+id/prep_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text_small"
+                    android:layout_marginLeft="5dp"
+                    android:text="####"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_list_small" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+            <TextView
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Yield: "
+                android:textColor="@color/title_color"
+                android:textSize="16dp" />
+                <TextView
+                    android:id="@+id/r_yield"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/margin_text_small"
+                    android:layout_marginLeft="5dp"
+                    android:text="####"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_list_small" />
+            </LinearLayout>
+            </LinearLayout>
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>
