@@ -12,19 +12,25 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.recipeGenie">
         <activity
-            android:name="com.example.recipegenie.UpdateRecipe"
+            android:name=".search_recipes"
             android:exported="false" />
         <activity
-            android:name="com.example.recipegenie.RecipePage"
+            android:name=".Landing_page"
             android:exported="false" />
         <activity
-            android:name="com.example.recipegenie.NewRecipeForm"
+            android:name=".UpdateRecipe"
             android:exported="false" />
         <activity
-            android:name="com.example.recipegenie.FavoritesList"
+            android:name=".RecipePage"
             android:exported="false" />
         <activity
-            android:name="com.example.recipegenie.MainActivity"
+            android:name=".NewRecipeForm"
+            android:exported="false" />
+        <activity
+            android:name=".FavoritesList"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
