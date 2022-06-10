@@ -33,12 +33,12 @@ class NewRecipeForm : AppCompatActivity() {
 
         vm = MainViewModel(application)
 
-        val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_submit)
-        val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
+//        val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_submit)
+//        val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
         val btnCancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
 
 
-        btnSubmit.setOnClickListener {
+//        btnSubmit.setOnClickListener {
 
             val title: String = title.text.toString()
             val rYield: String = rYield.text.toString()
@@ -101,23 +101,23 @@ class NewRecipeForm : AppCompatActivity() {
             }
         }
 
-        btnCancel.setOnClickListener {
-            val intent = Intent(this, FavoritesList::class.java)
-            startActivity(intent)
+//        btnCancel.setOnClickListener {
+//            val intent = Intent(this, FavoritesList::class.java)
+//            startActivity(intent)
+//
+//            val message = "cancelled"
+//            val duration = Toast.LENGTH_LONG
+//            val toast = Toast.makeText(applicationContext, message, duration)
+//            toast.show()
+//        }
 
-            val message = "cancelled"
-            val duration = Toast.LENGTH_LONG
-            val toast = Toast.makeText(applicationContext, message, duration)
-            toast.show()
-        }
-
-        btnClear.setOnClickListener {
-            title.text.clear()
-            rYield.text.clear()
-            prepTime.text.clear()
-            totalTime.text.clear()
-            ingredients.text.clear()
-            directions.text.clear()
-        }
-    }
+//        btnClear.setOnClickListener {
+//            title.text.clear()
+//            rYield.text.clear()
+//            prepTime.text.clear()
+//            totalTime.text.clear()
+//            ingredients.text.clear()
+//            directions.text.clear()
+//        }
+//    }
 }
