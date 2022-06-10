@@ -22,7 +22,7 @@ class FavoritesList : AppCompatActivity() {
             getRecipes(recipeList)
         }
 
-        var recyclerView: RecyclerView = findViewById(R.id.recycler_view)
+        var recyclerView: RecyclerView = findViewById(R.id.recyclerView_favorites_2)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 

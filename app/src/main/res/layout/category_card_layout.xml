@@ -1,80 +1,110 @@
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="150dp"
-    android:layout_height="225dp"
+    android:layout_width="@dimen/category_card_width"
+    android:layout_height="@dimen/category_card_height"
 
-    app:cardElevation="6dp"
-    app:cardCornerRadius="20dp"
+    app:cardElevation="@dimen/category_card_elevation"
+    app:cardCornerRadius="@dimen/category_card_radius"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
     >
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:padding="5dp"
+        android:padding="@dimen/category_card_padding"
         android:background="@drawable/card_background"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         >
         <ImageView
+            android:id="@+id/recyclercard_image"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-
+            android:layout_height="@dimen/category_card_image_height"
             android:layout_gravity="center|top"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:src="@mipmap/ic_recipe_round"
             />
 
         <TextView
             android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Item Name"
-            android:textSize="20sp"
+            android:text="@string/card_title"
+            android:textSize="@dimen/category_card_title"
             android:textStyle="bold"
             android:textColor="@color/white"
+            android:fontFamily="@font/Roboto_Bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             />
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Total Time: "
-            android:textSize="10sp"
+            android:layout_marginTop="@dimen/category_card_margins"
+            android:text="@string/card_subtitle_total"
+            android:textSize="@dimen/category_card_subtitle"
             android:textColor="@color/title_color"
+            android:fontFamily="@font/Montserrat_Bold"
             />
             <TextView
                 android:id="@+id/total_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
+                android:layout_marginTop="@dimen/category_card_margins"
                 android:layout_marginLeft="5dp"
-                android:text="#### "
-                android:textSize="10sp"
+                android:text="@string/card_placeholder_text"
+                android:textSize="@dimen/category_card_subtitle"
                 android:textColor="@color/white"
+                android:fontFamily="@font/Montserrat_Regular"
                 />
         </LinearLayout>
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Prep Time: "
-            android:textSize="10sp"
+            android:layout_marginTop="@dimen/category_card_margins"
+            android:text="@string/card_subtitle_prep"
+            android:textSize="@dimen/category_card_subtitle"
             android:textColor="@color/title_color"
+            android:fontFamily="@font/Montserrat_Bold"
             />
             <TextView
                 android:id="@+id/prep_time"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="5dp"
-                android:layout_marginLeft="5dp"
-                android:text="#### "
-                android:textSize="10sp"
+                android:layout_marginTop="@dimen/category_card_margins"
+                android:layout_marginLeft="@dimen/category_card_margins"
+                android:text="@string/card_placeholder_text"
+                android:textSize="@dimen/category_card_subtitle"
+                android:fontFamily="@font/Montserrat_Regular"
                 android:textColor="@color/white"
                 />
         </LinearLayout>
@@ -82,48 +112,60 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="Yield: "
-            android:textSize="10sp"
+            android:layout_marginTop="@dimen/category_card_margins"
+            android:text="@string/card_subtitle_yield"
+            android:textSize="@dimen/category_card_subtitle"
             android:textColor="@color/title_color"
+            android:fontFamily="@font/Montserrat_Bold"
             />
         <TextView
             android:id="@+id/r_yield"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:text="#### "
-            android:textSize="10sp"
+            android:layout_marginTop="@dimen/category_card_margins"
+            android:layout_marginLeft="@dimen/category_card_margins"
+            android:text="@string/card_placeholder_text"
+            android:textSize="@dimen/category_card_subtitle"
             android:textColor="@color/white"
+            android:fontFamily="@font/Montserrat_Regular"
             />
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         >
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:text="##: "
-            android:textSize="10sp"
+            android:layout_marginTop="@dimen/category_card_margins"
+            android:text="@string/card_subtitle_id"
+            android:textSize="@dimen/category_card_subtitle"
             android:textColor="@color/title_color"
+            android:fontFamily="@font/Montserrat_Bold"
             />
         <TextView
             android:id="@+id/id"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="5dp"
-            android:layout_marginLeft="5dp"
-            android:text="#### "
-            android:textSize="10sp"
+            android:layout_marginTop="@dimen/category_card_margins"
+            android:layout_marginLeft="@dimen/category_card_margins"
+            android:text="@string/card_placeholder_text"
+            android:textSize="@dimen/category_card_subtitle"
             android:textColor="@color/white"
+            android:fontFamily="@font/Montserrat_Regular"
             />
     </LinearLayout>
     </LinearLayout>

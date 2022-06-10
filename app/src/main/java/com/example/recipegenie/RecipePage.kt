@@ -22,12 +22,6 @@ class RecipePage : AppCompatActivity() {
         //populate TextFields with recipe data from repo and get recipeID as a String
         var recipe: Recipe = getData(repo)
 
-        val btnHome: ExtendedFloatingActionButton = findViewById(R.id.btn_home)
-        btnHome.setOnClickListener {
-            val intent: Intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
-        }
-
         val btnEdit: ExtendedFloatingActionButton = findViewById(R.id.btn_edit)
         btnEdit.setOnClickListener {
             val intent: Intent = Intent(this, UpdateRecipe::class.java)

@@ -5,22 +5,30 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
     tools:context=".MainActivity">
 
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:layout_centerHorizontal="true">
+        android:layout_marginTop="@dimen/homepage_margin"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
         <TextView
             android:id="@+id/title_recipe"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Recipe"
-            android:textSize="20sp"
+            android:text="@string/title_name_first"
+            android:textSize="@dimen/title_text"
             android:textColor="@color/white"
-            android:textStyle="bold"
+            android:fontFamily="@font/Roboto_Bold"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
@@ -28,18 +36,22 @@
             />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/title_image"
+            android:layout_height="@dimen/title_image"
             android:src="@drawable/genie_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             />
         <TextView
             android:id="@+id/title_genie"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Genie"
-            android:textSize="20sp"
+            android:text="@string/title_name_second"
+            android:textSize="@dimen/title_text"
             android:textColor="@color/title_color"
-            android:textStyle="bold"
+            android:fontFamily="@font/Roboto_Bold"
             android:layout_toRightOf="@id/title_recipe"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintLeft_toLeftOf="parent"
@@ -52,46 +64,61 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="75dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginTop="@dimen/homepage_category_margin_top"
+        android:layout_marginLeft="@dimen/homepage_margin"
+        android:layout_marginRight="@dimen/homepage_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Categories"
+            android:text="@string/homepage_subtitle"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"/>
+            android:textSize="@dimen/homepage_subtitle_text"
+            android:fontFamily="@font/Roboto_Bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="@dimen/linear_btn_margin_top"
+            android:layout_marginBottom="@dimen/linear_btn_margin_bottom"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             >
             <Button
-                android:layout_width="96dp"
-                android:layout_height="40dp"
-                android:text="Breakfast"
-                android:textSize="10sp"
-                android:layout_marginRight="50dp"
+                android:layout_width="@dimen/homepage_btn_width"
+                android:layout_height="@dimen/homepage_btn_height"
+                android:text="@string/homepage_btn_text"
+                android:textSize="@dimen/homepage_btn_text"
+                android:fontFamily="@font/Roboto_Bold"
+                android:layout_marginRight="@dimen/homepage_btn_margin"
                 android:background="@drawable/category_btn"
                 app:backgroundTint="@null"
                 />
             <Button
-                android:layout_width="96dp"
-                android:layout_height="40dp"
-                android:text="Lunch"
-                android:textSize="10sp"
+                android:layout_width="@dimen/homepage_btn_width"
+                android:layout_height="@dimen/homepage_btn_height"
+                android:text="@string/homepage_btn_text_2"
+                android:textSize="@dimen/homepage_btn_text"
+                android:fontFamily="@font/Roboto_Bold"
                 android:background="@drawable/category_btn"
                 app:backgroundTint="@null"/>
             <Button
-                android:layout_width="96dp"
-                android:layout_height="40dp"
-                android:text="Dinner"
-                android:layout_marginLeft="50dp"
-                android:textSize="10sp"
+                android:layout_width="@dimen/homepage_btn_width"
+                android:layout_height="@dimen/homepage_btn_height"
+                android:text="@string/homepage_btn_text_3"
+                android:layout_marginLeft="@dimen/homepage_btn_margin"
+                android:textSize="@dimen/homepage_btn_text"
+                android:fontFamily="@font/Roboto_Bold"
                 android:background="@drawable/category_btn"
                 app:backgroundTint="@null"/>
 
@@ -104,6 +131,10 @@
             android:layout_weight="1"
             tools:itemCount="1"
             tools:listitem="@layout/category_card_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             />
 
     </LinearLayout>
@@ -112,19 +143,27 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:layout_marginTop="375dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        android:layout_marginTop="@dimen/homepage_favorites_margin_top"
+        android:layout_marginLeft="@dimen/homepage_margin"
+        android:layout_marginRight="@dimen/homepage_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Favorites"
+            android:text="@string/homepage_subtitle_2"
             android:textColor="@color/white"
-            android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:layout_marginBottom="10dp"/>
+            android:textSize="@dimen/homepage_subtitle_text"
+            android:fontFamily="@font/Roboto_Bold"
+            android:layout_marginTop="@dimen/homepage_margin"
+            android:layout_marginBottom="@dimen/homepage_margin"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView_favorites"
@@ -132,32 +171,42 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             tools:itemCount="1"
-            tools:listitem="@layout/category_card_layout" />
+            tools:listitem="@layout/category_card_layout"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
 
 
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="@dimen/bottom_nav_height"
         android:layout_alignParentBottom="true"
         android:gravity="center"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         >
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/bottom_nav_icons"
+            android:layout_height="@dimen/bottom_nav_icons"
             android:src="@drawable/ic_baseline_search_24"
-            android:layout_marginRight="50dp"
+            android:layout_marginRight="@dimen/bottom_nav_icon_margins"
             />
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/bottom_nav_icons"
+            android:layout_height="@dimen/bottom_nav_icons"
             android:src="@drawable/ic_baseline_home_24"
             />
         <ImageView
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/bottom_nav_icons"
+            android:layout_height="@dimen/bottom_nav_icons"
             android:src="@drawable/ic_baseline_favorite_24"
-            android:layout_marginLeft="50dp"
+            android:layout_marginLeft="@dimen/bottom_nav_icon_margins"
+            
             />
 
     </LinearLayout>

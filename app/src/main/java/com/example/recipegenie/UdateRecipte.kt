@@ -65,7 +65,7 @@ class UpdateRecipe : AppCompatActivity() {
             RecipeRepository(this)
         }
         // Map TextViews in recipe page
-        id = findViewById(R.id.text_view_id)
+        id = findViewById(R.id.id)
         title = findViewById(R.id.edit_text_title)
         rYield = findViewById(R.id.edit_text_yield)
         prepTime = findViewById(R.id.edit_text_prep_time)

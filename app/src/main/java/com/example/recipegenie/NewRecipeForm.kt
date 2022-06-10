@@ -33,7 +33,7 @@ class NewRecipeForm : AppCompatActivity() {
 
         vm = MainViewModel(application)
 
-        val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_submit)
+        val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_add)
         val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
         val btnCancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
 

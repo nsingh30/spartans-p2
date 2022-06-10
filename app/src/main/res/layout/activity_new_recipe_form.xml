@@ -5,74 +5,112 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:background="@color/background_color"
 android:orientation="vertical"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
 tools:context=".UpdateRecipe">
 
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Add New Recipe"
+        android:text="@string/card_title_2"
         android:textColor="@color/white"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="10dp"
-        android:layout_gravity="center_horizontal"/>
+        android:textSize="@dimen/large_card_add_title_text"
+        android:fontFamily="@font/Roboto_Bold"
+        android:layout_marginTop="@dimen/large_card_margin"
+
+        android:layout_gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
 
 <ScrollView
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_margin="10dp"
+            android:layout_height="@dimen/large_card_cardview_height"
+            android:layout_margin="@dimen/large_card_margin"
             android:layout_weight="1"
-            app:cardCornerRadius="@dimen/card_corner_radius">
+            app:cardCornerRadius="@dimen/large_card_radius"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:background="@drawable/card_background"
-                android:orientation="vertical">
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
                 </LinearLayout>
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_margin="10dp"
-                    android:orientation="vertical">
+                    android:layout_margin="@dimen/large_card_margin"
+                    android:orientation="vertical"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
 
                     <ImageView
                         android:id="@+id/recipe_image_view"
-                        android:layout_width="150dp"
-                        android:layout_height="150dp"
+                        android:layout_width="@dimen/large_card_add_image"
+                        android:layout_height="@dimen/large_card_add_image"
                         android:layout_gravity="center"
-                        android:layout_marginTop="10dp"
-                        android:src="@drawable/ic_add_image_24" />
+                        android:layout_marginTop="@dimen/large_card_margin"
+                        android:src="@mipmap/ic_recipe_round" />
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="vertical">
+                        android:layout_marginBottom="@dimen/large_card_margin"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Title:"
+                            android:text="@string/card_title"
                             android:textColor="@color/title_color"
-                            android:textSize="@dimen/text_medium" />
+                            android:textSize="@dimen/large_card_subtitle_text"
+                            android:fontFamily="@font/Montserrat_Bold"
+                            />
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
@@ -84,6 +122,7 @@ tools:context=".UpdateRecipe">
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
+                                android:fontFamily="@font/Montserrat_Regular"
                                 app:errorEnabled="true" />
 
 
@@ -93,21 +132,31 @@ tools:context=".UpdateRecipe">
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="vertical">
+                        android:layout_marginBottom="@dimen/large_card_margin"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Yield:"
+                            android:text="@string/card_subtitle_yield"
                             android:textColor="@color/title_color"
-                            android:textSize="@dimen/text_medium" />
+                            android:textSize="@dimen/large_card_subtitle_text"
+                            android:fontFamily="@font/Montserrat_Bold"
+                            />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width="100dp"
+                            android:layout_width="@dimen/large_card_input_field_width"
                             android:layout_height="wrap_content"
                             >
 
@@ -117,6 +166,7 @@ tools:context=".UpdateRecipe">
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
+                                android:fontFamily="@font/Montserrat_Regular"
                                 app:errorEnabled="true" />
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -124,20 +174,25 @@ tools:context=".UpdateRecipe">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:layout_marginLeft="30dp"
-                        android:layout_marginRight="30dp"
-
-                        android:orientation="vertical">
+                        android:layout_marginBottom="@dimen/large_card_margin"
+                        android:layout_marginLeft="@dimen/large_card_input_margin"
+                        android:layout_marginRight="@dimen/large_card_input_margin"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Prep time:"
+                            android:text="@string/card_subtitle_prep"
                             android:textColor="@color/title_color"
-                            android:textSize="@dimen/text_medium" />
+                            android:textSize="@dimen/large_card_subtitle_text"
+                            android:fontFamily="@font/Montserrat_Bold"
+                            />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width="100dp"
+                            android:layout_width="@dimen/large_card_input_field_width"
                             android:layout_height="wrap_content"
                             >
 
@@ -147,6 +202,7 @@ tools:context=".UpdateRecipe">
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
+                                android:fontFamily="@font/Montserrat_Regular"
                                 app:errorEnabled="true" />
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -154,17 +210,23 @@ tools:context=".UpdateRecipe">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="vertical">
+                        android:layout_marginBottom="@dimen/large_card_margin"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Total time:"
+                            android:text="@string/card_subtitle_total"
                             android:textColor="@color/title_color"
-                            android:textSize="@dimen/text_medium" />
+                            android:textSize="@dimen/large_card_subtitle_text"
+                            android:fontFamily="@font/Montserrat_Bold"
+                            />
 
                         <com.google.android.material.textfield.TextInputLayout
-                            android:layout_width="100dp"
+                            android:layout_width="@dimen/large_card_input_field_width"
                             android:layout_height="wrap_content"
                             >
 
@@ -174,6 +236,7 @@ tools:context=".UpdateRecipe">
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
+                                android:fontFamily="@font/Montserrat_Regular"
                                 app:errorEnabled="true" />
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -182,14 +245,20 @@ tools:context=".UpdateRecipe">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="vertical">
+                        android:layout_marginBottom="@dimen/large_card_margin"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Ingredients:"
+                            android:text="@string/card_subtitle_ingredients"
                             android:textColor="@color/title_color"
-                            android:textSize="@dimen/text_medium" />
+                            android:textSize="@dimen/large_card_subtitle_text"
+                            android:fontFamily="@font/Montserrat_Bold"
+                            />
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
@@ -203,20 +272,27 @@ tools:context=".UpdateRecipe">
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
                                 android:inputType="textMultiLine"
+                                android:fontFamily="@font/Montserrat_Regular"
                                 app:errorEnabled="true" />
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:layout_marginBottom="10dp"
-                        android:orientation="vertical">
+                        android:layout_marginBottom="@dimen/large_card_margin"
+                        android:orientation="vertical"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintLeft_toLeftOf="parent"
+                        app:layout_constraintRight_toRightOf="parent"
+                        app:layout_constraintTop_toTopOf="parent">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Directions:"
+                            android:text="@string/card_subtitle_directions"
                             android:textColor="@color/title_color"
-                            android:textSize="@dimen/text_medium" />
+                            android:textSize="@dimen/large_card_subtitle_text"
+                            android:fontFamily="@font/Montserrat_Bold"
+                            />
 
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
@@ -228,9 +304,9 @@ tools:context=".UpdateRecipe">
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-
                                 android:backgroundTint="@color/category_btn"
                                 android:inputType="textMultiLine"
+                                android:fontFamily="@font/Montserrat_Regular"
                                 app:errorEnabled="true" />
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
@@ -242,31 +318,60 @@ tools:context=".UpdateRecipe">
             android:id="@+id/layout_buttons"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:orientation="vertical">
+            android:layout_marginLeft="@dimen/large_card_margin"
+            android:layout_marginRight="@dimen/large_card_margin"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/btn_add"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/large_card_flt_btn_margin"
                 android:layout_weight="1"
                 android:backgroundTint="@color/category_btn"
-                android:text="Add"
+                android:text="@string/card_btn_add"
                 android:textAlignment="center"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:fontFamily="@font/Roboto_Bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
+            <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                android:id="@+id/btn_clear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/large_card_flt_btn_margin"
+                android:layout_weight="1"
+                android:backgroundTint="@color/category_btn"
+                android:text="@string/card_btn_clear"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                android:fontFamily="@font/Roboto_Bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
 
             <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
                 android:id="@+id/btn_cancel"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
+                android:layout_margin="@dimen/large_card_flt_btn_margin"
                 android:layout_weight="1"
                 android:backgroundTint="@color/category_btn"
                 android:text="Cancel"
                 android:textAlignment="center"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:fontFamily="@font/Roboto_Bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent"/>
         </LinearLayout>
     </LinearLayout>
 </ScrollView>

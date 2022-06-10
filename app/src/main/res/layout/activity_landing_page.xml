@@ -5,21 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintLeft_toLeftOf="parent"
+    app:layout_constraintRight_toRightOf="parent"
+    app:layout_constraintTop_toTopOf="parent"
     tools:context=".Landing_page">
 
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp">
+        android:layout_marginTop="@dimen/homepage_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
     <TextView
         android:id="@+id/title_recipe"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Recipe"
-        android:textSize="20sp"
+        android:text="@string/title_name_first"
+        android:textSize="@dimen/title_text"
         android:textColor="@color/white"
-        android:textStyle="bold"
+        android:fontFamily="@font/Roboto_Bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -27,18 +35,22 @@
         />
 
         <ImageView
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="@dimen/title_image"
+            android:layout_height="@dimen/title_image"
             android:src="@drawable/genie_2"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
             />
     <TextView
         android:id="@+id/title_genie"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Genie"
-        android:textSize="20sp"
+        android:text="@string/title_name_second"
+        android:textSize="@dimen/title_text"
         android:textColor="@color/title_color"
-        android:textStyle="bold"
+        android:fontFamily="@font/Roboto_Bold"
         android:layout_toRightOf="@id/title_recipe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -47,81 +59,103 @@
         />
     </LinearLayout>
     <TextView
-        android:layout_width="300dp"
+        android:layout_width="@dimen/landingpage_text_width"
         android:layout_height="wrap_content"
-        android:text="Your Recipe Wish List Starts Here"
-        android:textSize="30dp"
+        android:text="@string/welcome_text"
+        android:textSize="@dimen/landingpage_text"
         android:textColor="@color/white"
+        android:fontFamily="@font/Roboto_Regular"
         android:textAlignment="center"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="100dp"
-
+        android:layout_marginTop="@dimen/landingpage_text_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
 
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:paddingTop="50dp"
+        android:paddingTop="@dimen/landingpage_image_padding"
         android:adjustViewBounds="true"
-        android:src="@drawable/groceries_3" />
+        android:src="@drawable/groceries_3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
 
     <Button
         android:id="@+id/sign_in_btn"
-        android:layout_width="300dp"
-        android:layout_height="60dp"
-        android:text="Sign In"
-        android:textSize="20sp"
-        android:layout_marginRight="50dp"
+        android:layout_width="@dimen/landingpage_btn_width"
+        android:layout_height="@dimen/landingpage_btn_height"
+        android:text="@string/landing_page_btn"
+        android:textSize="@dimen/landingpage_btn_text"
+        android:fontFamily="@font/Roboto_Bold"
        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="100dp"
+        android:layout_marginBottom="@dimen/landingpage_btn_margin"
         android:background="@drawable/sign_in_btn"
         app:backgroundTint="@null"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="75dp">
+        android:layout_marginBottom="@dimen/landingpage_text_bottom_margin"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Don't Have Account?"
-        android:textSize="15dp"
+        android:text="@string/bottom_text"
+        android:textSize="@dimen/landingpage_text_bottom"
         android:textColor="@color/white"
+        android:fontFamily="@font/Montserrat_Regular"
         />
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Sign Up"
-        android:textSize="15dp"
+        android:text="@string/bottom_text_btn"
+        android:textSize="@dimen/landingpage_text_bottom"
         android:textColor="@color/white"
-        android:textStyle="bold"
-        android:layout_marginLeft="5dp"/>
+        android:fontFamily="@font/Montserrat_Bold"
+        android:layout_marginLeft="@dimen/landingpage_text_bottom_margin_side"/>
     </LinearLayout>
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="50dp">
+        android:layout_marginBottom="@dimen/landingpage_text_bottom_margin_2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Don't Want To Sign Up?"
-            android:textSize="15dp"
+            android:text="@string/bottom_text_2"
+            android:textSize="@dimen/landingpage_text_bottom"
             android:textColor="@color/white"
+            android:fontFamily="@font/Montserrat_Regular"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Guest"
-            android:textSize="15dp"
+            android:text="@string/bottom_text_btn_2"
+            android:textSize="@dimen/landingpage_text_bottom"
             android:textColor="@color/white"
-            android:textStyle="bold"
-            android:layout_marginLeft="5dp"/>
+            android:fontFamily="@font/Montserrat_Bold"
+            android:layout_marginLeft="@dimen/landingpage_text_bottom_margin_side"/>
     </LinearLayout>
 
 </RelativeLayout>

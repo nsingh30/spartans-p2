@@ -27,4 +27,10 @@
     <color name="category_btn">#293863</color>
     <color name="hover_btn">#fe9900</color>
     <color name="gradient_color">#3b4a75</color>
+    <color name="query_hint_color">#009688</color>
+    <color name="focused_color">#FF0000</color>
+    <color name="pressed_color">#FF0000</color>
+    <color name="disabled_color">#009688</color>
+
+
 </resources>
