@@ -12,7 +12,7 @@ FEATURES:
  * Get step-by-step instructions on how to cook every recipe
  * Store, create, update and delete recipes from internal memory
 
-##Tecnologies:
+## Tecnologies:
 
 | IDE/Editor        | Languages   | Tools      |
 | ----------------- | ----------- | ---------- |
@@ -21,7 +21,7 @@ FEATURES:
 | * VS Studio Code  | * XML       | * Postman  |
 
 
-##Contributors
+## Contributors
 * Elmer Orellana
 * Krystal Bradley
 * Corey Glaze 
