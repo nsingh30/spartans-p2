@@ -1,25 +1,35 @@
 package com.example.recipegenie
 
-import retrofit2.Call
+
+import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import retrofit2.http.GET
+import retrofit2.http.*
 
-interface RetroApiInterface {
+interface RetrofitClient {
 
-    //Singleton
-    @GET("recipelist.json")
-    fun getAllRecipes(): Call<List<Recipe>>
+    @Headers(
+        "X-RapidAPI-Host: tasty.p.rapidapi.com",
+        "X-RapidAPI-Key: c3b669158emsh01efa766091fd72p197679jsndc6228d6e712"
+    )
+    @GET("recipes/list")
+    suspend fun getAllRecipes(
+        @Query("from") offset: Int, @Query("size") limit: Int,
+        @Query("tags") tags: String, @Query("q") search: String
+    ): Response<RecipeResults>
 
     companion object {
-        var BASE_URL = "https://ssblue18.github.io/"
-        fun create() : RetroApiInterface {
+        var BASE_URL = "https://tasty.p.rapidapi.com/"
+
+        fun create(): RetrofitClient {
             val retrofit = Retrofit.Builder()
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(BASE_URL)
                 .build()
 
-            return retrofit.create(RetroApiInterface::class.java)
+            println("inside RetroApiInterface create")
+
+            return retrofit.create(RetrofitClient::class.java)
         }
     }
 }
