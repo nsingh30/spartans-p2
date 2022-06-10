@@ -7,7 +7,7 @@ application uses an exteranal data source backed by the Tasty API to query the
 user's request. Recipes can be stored locally as "favorites" in the device's
 internal storage.
 
-### FEATURES: 
+### Features: 
  * Serch from thousands of recipes available in the Tasty library
  * Get step-by-step instructions on how to cook every recipe
  * Store, create, update and delete recipes from internal memory
