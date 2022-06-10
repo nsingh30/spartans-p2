@@ -12,7 +12,7 @@ internal storage.
  * Get step-by-step instructions on how to cook every recipe
  * Store, create, update and delete recipes from internal memory
 
-## Tecnologies:
+## Technologies:
 | IDE/Editor        | Languages   | Tools      |
 | ----------------- | ----------- | ---------- |
 | * Android Studio  | * Kotlin    | * Retrofit |
