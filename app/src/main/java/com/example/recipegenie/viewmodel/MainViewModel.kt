@@ -1,10 +1,12 @@
-package com.example.recipegenie
+package com.example.recipegenie.viewmodel
 
 
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.viewModelScope
+import com.example.recipegenie.model.RecipeRepository
+import com.example.recipegenie.model.Recipe
 import kotlinx.coroutines.launch
 
 class MainViewModel(app: Application): AndroidViewModel(app) {

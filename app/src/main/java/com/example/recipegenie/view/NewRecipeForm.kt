@@ -1,4 +1,4 @@
-package com.example.recipegenie
+package com.example.recipegenie.view
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -7,6 +7,9 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import com.example.recipegenie.R
+import com.example.recipegenie.model.Recipe
+import com.example.recipegenie.viewmodel.MainViewModel
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class NewRecipeForm : AppCompatActivity() {

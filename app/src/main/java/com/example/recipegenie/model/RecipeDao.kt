@@ -1,4 +1,4 @@
-package com.example.recipegenie
+package com.example.recipegenie.model
 
 import androidx.lifecycle.LiveData
 import androidx.room.*

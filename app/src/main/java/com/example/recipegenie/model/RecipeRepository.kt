@@ -1,10 +1,13 @@
-package com.example.recipegenie
+package com.example.recipegenie.model
 
 import android.content.Context
 import androidx.lifecycle.LiveData
+import com.example.recipegenie.model.AppDatabase
+import com.example.recipegenie.model.Recipe
+import com.example.recipegenie.model.RecipeDao
 
 class RecipeRepository (context: Context){
-    var db:RecipeDao? = AppDatabase.getInstance(context)?.recipeDao()
+    var db: RecipeDao? = AppDatabase.getInstance(context)?.recipeDao()
 
     fun getAllRecipes(): LiveData<List<Recipe>>? {
         return db?.selectRecipe()

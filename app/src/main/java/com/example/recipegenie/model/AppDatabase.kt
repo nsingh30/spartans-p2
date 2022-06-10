@@ -1,4 +1,4 @@
-package com.example.recipegenie
+package com.example.recipegenie.model
 
 
 import android.content.Context

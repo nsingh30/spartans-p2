@@ -1,10 +1,14 @@
-package com.example.recipegenie
+package com.example.recipegenie.view
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recipegenie.R
+import com.example.recipegenie.model.Recipe
+import com.example.recipegenie.viewmodel.MainViewModel
+import com.example.recipegenie.viewmodel.RecipeAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class FavoritesList : AppCompatActivity() {

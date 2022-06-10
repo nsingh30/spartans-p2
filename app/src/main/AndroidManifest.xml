@@ -12,22 +12,22 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.recipeGenie">
         <activity
-            android:name=".SearchRecipes"
+            android:name=".view.SearchRecipes"
             android:exported="false" />
         <activity
-            android:name=".Landing_page"
+            android:name=".view.Landing_page"
             android:exported="false" />
         <activity
             android:name=".UpdateRecipe"
             android:exported="false" />
         <activity
-            android:name=".RecipePage"
+            android:name=".view.RecipePage"
             android:exported="false" />
         <activity
-            android:name=".NewRecipeForm"
+            android:name=".view.NewRecipeForm"
             android:exported="false" />
         <activity
-            android:name=".FavoritesList"
+            android:name=".view.FavoritesList"
             android:exported="false" />
         <activity
             android:name=".MainActivity"
