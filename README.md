@@ -14,7 +14,7 @@ FEATURES:
 
 TECHNOLOGIES:
 
-| Android           | Languages   | Tools      |
+| IDE/Editor        | Languages   | Tools      |
 | ----------------- | ----------- | ---------- |
 | * Android Studio  | * Kotlin    | * Retrofit |
 | * IntelliJ IDEA   | * SQLite    | * Mockito  |
