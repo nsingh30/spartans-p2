@@ -3,37 +3,37 @@ package com.example.recipegenie
 import android.content.Context
 import androidx.lifecycle.LiveData
 
-class RecipeRepository (context: Context){
-    var db:RecipeDao? = AppDatabase.getInstance(context)?.recipeDao()
+class RecipeRepository (var dao: RecipeDao,var retroApiInterface: RetroApiInterface){
+//    var dao:Recipedao = AppDatabase.getInstance(context)?.recipeDao()
 
     fun getAllRecipes(): LiveData<List<Recipe>>? {
-        return db?.selectRecipe()
+        return dao.selectRecipe()
     }
 
     fun insertRecipe(recipe: Recipe) {
-        db?.insertRecipe(recipe)
+        dao.insertRecipe(recipe)
     }
 
     fun updateRecipe(recipe: Recipe) {
-        db?.updateRecipe(recipe)
+        dao.updateRecipe(recipe)
     }
 
     fun deleteRecipe(recipe: Recipe) {
-        db?.deleteRecipe(recipe)
+        dao.deleteRecipe(recipe)
     }
 
     fun deleteAll(){
-        db?.deleteAll()
+        dao.deleteAll()
     }
 
     fun findRecipeWithId(search: String): List<Recipe> {
 
-        return db?.findRecipeWithId(search)!!
+        return dao.findRecipeWithId(search)!!
     }
 
     fun findRecipeWithTitle(search: String): List<Recipe> {
 
-        return db?.findRecipeWithTitle(search)!!
+        return dao.findRecipeWithTitle(search)!!
     }
 
     // insert things in an Async way

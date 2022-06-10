@@ -4,15 +4,16 @@ package com.example.recipegenie
 import android.app.Application
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 
-class MainViewModel(app: Application): AndroidViewModel(app) {
-    private val repo: RecipeRepository
+class MainViewModel(  private val repo: RecipeRepository): ViewModel() {
+
     val allRecipes : LiveData<List<Recipe>>?
 
     init {
-        repo = RecipeRepository(app)
+//        repo = RecipeRepository(app)
         allRecipes = repo.getAllRecipes()
     }
 

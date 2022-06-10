@@ -14,14 +14,17 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     var recipeList = ArrayList<Recipe>()
-    var vm = MainViewModel
+//    var vm = MainViewModel
     lateinit var adapter:RecipeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+       var inter = RetroApiInterface.create()
+        var dao = AppDatabase.getInstance(this)?.recipeDao()!!
+        var repo = RecipeRepository(dao,inter)
 
-        vm = MainViewModel(application)
+       var vm = MainViewModel(repo)
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView_category)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,
