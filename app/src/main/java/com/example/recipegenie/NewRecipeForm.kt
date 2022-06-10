@@ -34,7 +34,7 @@ class NewRecipeForm : AppCompatActivity() {
         vm = MainViewModel(application)
 
         val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_submit)
-        val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
+        //val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
         val btnCancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
 
 
@@ -111,13 +111,13 @@ class NewRecipeForm : AppCompatActivity() {
             toast.show()
         }
 
-        btnClear.setOnClickListener {
-            title.text.clear()
-            rYield.text.clear()
-            prepTime.text.clear()
-            totalTime.text.clear()
-            ingredients.text.clear()
-            directions.text.clear()
-        }
+//        btnClear.setOnClickListener {
+//            title.text.clear()
+//            rYield.text.clear()
+//            prepTime.text.clear()
+//            totalTime.text.clear()
+//            ingredients.text.clear()
+//            directions.text.clear()
+//        }
     }
 }

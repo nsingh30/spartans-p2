@@ -14,7 +14,7 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     var recipeList = ArrayList<Recipe>()
-    var vm = MainViewModel
+    lateinit var vm: MainViewModel
     lateinit var adapter:RecipeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -36,11 +36,18 @@ class MainActivity : AppCompatActivity() {
 
         vm = ViewModelProvider(this)[MainViewModel::class.java]
 
-//        val linkFavList: View = findViewById(R.id.fav_view)
-//        linkFavList.setOnClickListener{
-//            val intent = Intent(this, FavoritesList::class.java)
-//            startActivity(intent)
-//        }
+        val linkSearchList: View = findViewById(R.id.search_view)
+        linkSearchList.setOnClickListener{
+            val intent = Intent(this, search_recipes::class.java)
+            startActivity(intent)
+        }
+
+
+        val linkFavList: View = findViewById(R.id.fav_view)
+        linkFavList.setOnClickListener{
+            val intent = Intent(this, FavoritesList::class.java)
+            startActivity(intent)
+        }
     }
 
     fun onCardClick(position: Int) {
