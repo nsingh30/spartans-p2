@@ -13,7 +13,6 @@ internal storage.
  * Store, create, update and delete recipes from internal memory
 
 ## Tecnologies:
-
 | IDE/Editor        | Languages   | Tools      |
 | ----------------- | ----------- | ---------- |
 | * Android Studio  | * Kotlin    | * Retrofit |
