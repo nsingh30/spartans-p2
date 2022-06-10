@@ -12,18 +12,18 @@ FEATURES:
  * Get step-by-step instructions on how to cook every recipe
  * Store, create, update and delete recipes from internal memory
 
-Technologies used are:
-* Android Studio
-* Kotlin 
-* Postman 
-* Junit
-* Logging (timber)
-* Mockito
+TECHNOLOGIES:
+
+| Android           | Languages   | Tools      |
+| ----------------- |:-----------:| ----------:|
+| * Android Studio  | * Kotlin    | * Retrofit |
+| * IntelliJ IDEA   | * SQLite    | * Mockito  |
+| * VS Studio Code  | * XML       | * Postman  |
 
 
 ## Contributors
-* Elmer 
-* Krystal
+* Elmer Orellana
+* Krystal Bradley
 * Corey Glaze 
 * Nikki Singh
 * Subbulalakshmi  
