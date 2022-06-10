@@ -9,7 +9,8 @@ import com.example.recipegenie.model.RecipeDao
 class RecipeRepository (context: Context){
     var db: RecipeDao? = AppDatabase.getInstance(context)?.recipeDao()
 
-    fun getAllRoomRecipes(): LiveData<List<Recipe>>? {
+    fun getAllRecipes(): LiveData<List<Recipe>>? {
+
         return db?.selectRecipe()
     }
 

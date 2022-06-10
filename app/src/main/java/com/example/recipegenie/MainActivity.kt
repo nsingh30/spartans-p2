@@ -17,6 +17,7 @@ class MainActivity : AppCompatActivity() {
 //    var vm = MainViewModel(application)
 //    lateinit var adapter:RecipeAdapter
 //
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -41,7 +42,7 @@ class MainActivity : AppCompatActivity() {
 ////            val intent = Intent(this, FavoritesList::class.java)
 ////            startActivity(intent)
 ////        }
-    }
+//    }
 //
 //    fun onCardClick(position: Int) {
 //        println("position:::$position")
@@ -53,5 +54,5 @@ class MainActivity : AppCompatActivity() {
 //        this.recipeList.clear()
 //        this.recipeList.addAll(recipeList)
 //        adapter.notifyDataSetChanged()
-//    }
+    }
 }
