@@ -22,7 +22,7 @@ class FavoritesList : AppCompatActivity() {
         setContentView(R.layout.activity_favorites_list)
 
         mainViewModel = MainViewModel((application))
-        mainViewModel.allRecipes?.observe(this) { recipeList ->
+        mainViewModel.allRoomRecipes?.observe(this) { recipeList ->
             getRecipes(recipeList)
         }
 

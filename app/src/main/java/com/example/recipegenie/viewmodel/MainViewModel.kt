@@ -11,15 +11,23 @@ import kotlinx.coroutines.launch
 
 class MainViewModel(app: Application): AndroidViewModel(app) {
     private val repo: RecipeRepository
-    val allRecipes : LiveData<List<Recipe>>?
+    val allRoomRecipes : LiveData<List<Recipe>>?
+    val allSearchResults: LiveData<List<Recipe>>?
+
 
     init {
         repo = RecipeRepository(app)
-        allRecipes = repo.getAllRecipes()
+        allRoomRecipes = repo.getAllRoomRecipes()
+        allSearchResults = getSearchResults()
     }
 
-    fun getAllRecipes() = viewModelScope.launch {
-        repo.getAllRecipes()
+    fun getSearchResults() :LiveData<List<Recipe>>? {
+
+    return allSearchResults
+    }
+
+    fun getAllRoomRecipes() = viewModelScope.launch {
+        repo.getAllRoomRecipes()
     }
 
     fun insertRecipes(recipe: Recipe) = viewModelScope.launch {

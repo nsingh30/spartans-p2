@@ -9,7 +9,7 @@ import com.example.recipegenie.model.RecipeDao
 class RecipeRepository (context: Context){
     var db: RecipeDao? = AppDatabase.getInstance(context)?.recipeDao()
 
-    fun getAllRecipes(): LiveData<List<Recipe>>? {
+    fun getAllRoomRecipes(): LiveData<List<Recipe>>? {
         return db?.selectRecipe()
     }
 
