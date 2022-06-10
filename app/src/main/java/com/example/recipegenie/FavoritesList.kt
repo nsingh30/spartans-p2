@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.projectp0.R
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class FavoritesList : AppCompatActivity() {

@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".Landing_page">
+    tools:context="com.example.recipegenie.Landing_page">
 
     <LinearLayout
         android:layout_width="wrap_content"

@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.example.projectp0.R
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class RecipePage : AppCompatActivity() {
@@ -22,7 +23,7 @@ class RecipePage : AppCompatActivity() {
         //populate TextFields with recipe data from repo and get recipeID as a String
         var recipe: Recipe = getData(repo)
 
-        val btnHome: ExtendedFloatingActionButton = findViewById(R.id.btn_home)
+        val btnHome: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
         btnHome.setOnClickListener {
             val intent: Intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
