@@ -3,6 +3,7 @@ package com.example.recipegenie
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -33,9 +34,19 @@ class FavoritesList : AppCompatActivity() {
         // take the views adapter then assign it to the custom adapter we created
         recyclerView.adapter = recipeAdapter
 
-        val btnAdd: FloatingActionButton = findViewById(R.id.btn_add)
+        val btnAdd: ImageView = findViewById(R.id.btn_add)
         btnAdd.setOnClickListener() {
             val intent = Intent(this, NewRecipeForm::class.java)
+            startActivity(intent)
+        }
+        val searchView: ImageView = findViewById(R.id.search_view)
+        searchView.setOnClickListener() {
+            val intent = Intent(this, search_recipes::class.java)
+            startActivity(intent)
+        }
+        val home: ImageView = findViewById(R.id.home)
+        home.setOnClickListener() {
+            val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
         }
     }

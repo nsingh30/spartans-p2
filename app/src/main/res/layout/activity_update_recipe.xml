@@ -59,8 +59,7 @@
                         <ImageView
                             android:layout_width="@dimen/drawable_star_size"
                             android:layout_height="@dimen/drawable_star_size"
-                            android:layout_gravity="end"
-                            android:src="" />
+                            android:layout_gravity="end" />
 
                     </LinearLayout>
 <LinearLayout
