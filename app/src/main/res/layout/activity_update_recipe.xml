@@ -65,8 +65,13 @@
                         <ImageView
                             android:layout_width="@dimen/drawable_star_size"
                             android:layout_height="@dimen/drawable_star_size"
+<<<<<<< Updated upstream
                             android:layout_gravity="end"
                             android:src="@drawable/ic_star" />
+=======
+                            android:layout_gravity="end"/>
+<!--                            android:src="" -->
+>>>>>>> Stashed changes
 
                     </LinearLayout>
 

@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'org.jetbrains.kotlin.android'
     id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
 }
 
 android {
@@ -59,5 +60,8 @@ dependencies {
 
 
 
+
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+    implementation 'com.google.firebase:firebase-database:20.0.5'
 
 }

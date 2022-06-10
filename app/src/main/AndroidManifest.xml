@@ -12,10 +12,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.recipeGenie">
         <activity
+<<<<<<< Updated upstream
             android:name="com.example.recipegenie.UpdateRecipe"
             android:exported="false" />
         <activity
             android:name="com.example.recipegenie.RecipePage"
+=======
+            android:name=".SearchRecipes"
+            android:exported="false" />
+        <activity
+            android:name=".MainActivity"
+>>>>>>> Stashed changes
             android:exported="false" />
         <activity
             android:name="com.example.recipegenie.NewRecipeForm"
@@ -24,7 +31,24 @@
             android:name="com.example.recipegenie.FavoritesList"
             android:exported="false" />
         <activity
+<<<<<<< Updated upstream
             android:name="com.example.recipegenie.MainActivity"
+=======
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".RegistrationActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".NewRecipeForm"
+            android:exported="false" />
+        <activity
+            android:name=".FavoritesList"
+            android:exported="false" />
+        <activity
+            android:name=".LandingPage"
+>>>>>>> Stashed changes
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

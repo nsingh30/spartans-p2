@@ -9,7 +9,67 @@
     android:background="@color/app_background_color"
     tools:context=".MainActivity">
 
+<<<<<<< Updated upstream
     <androidx.cardview.widget.CardView
+=======
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true">
+        <TextView
+            android:id="@+id/title_recipe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recipe"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:src="@drawable/genie_2"
+            />
+        <TextView
+            android:id="@+id/title_genie"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Genie"
+            android:textSize="20sp"
+            android:textColor="@color/title_color"
+            android:textStyle="bold"
+            android:layout_toRightOf="@id/title_recipe"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            />
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="user name"></TextView>
+    <Button
+        android:id="@+id/sign_out_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="signout"
+        android:textSize="10sp"></Button>
+
+</LinearLayout>
+    <LinearLayout
+>>>>>>> Stashed changes
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/margin_card_medium"
