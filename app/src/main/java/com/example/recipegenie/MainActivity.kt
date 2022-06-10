@@ -14,14 +14,14 @@ import androidx.recyclerview.widget.RecyclerView
 class MainActivity : AppCompatActivity() {
 
     var recipeList = ArrayList<Recipe>()
-    var vm = MainViewModel
+//    var vm = MainViewModel
     lateinit var adapter:RecipeAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        vm = MainViewModel(application)
+//        vm = MainViewModel(application)
 
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView_category)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,
@@ -30,11 +30,11 @@ class MainActivity : AppCompatActivity() {
         adapter = RecipeAdapter({position -> onCardClick(position)}, recipeList)
         recyclerView.adapter = adapter
 
-        vm.allRecipes?.observe(this, {
-                recipeList -> getRecipe(recipeList)
-        })
+//        vm.allRecipes?.observe(this, {
+//                recipeList -> getRecipe(recipeList)
+//        })
 
-        vm = ViewModelProvider(this)[MainViewModel::class.java]
+//        vm = ViewModelProvider(this)[MainViewModel::class.java]
 
 //        val linkFavList: View = findViewById(R.id.fav_view)
 //        linkFavList.setOnClickListener{

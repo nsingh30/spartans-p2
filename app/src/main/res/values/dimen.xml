@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-
-
-
 <!--    landing page-->
     <dimen name="landingpage_text_width">300dp</dimen>
     <dimen name="landingpage_text">30sp</dimen>
@@ -23,7 +20,7 @@
     <dimen name="homepage_margin">10dp</dimen>
     <dimen name="title_text">20sp</dimen>
     <dimen name="title_image">20dp</dimen>
-    <dimen name="homepage_category_margin_top">75dp</dimen>
+    <dimen name="homepage_category_margin_top">50dp</dimen>
     <dimen name="homepage_subtitle_text">18sp</dimen>
     <dimen name="linear_btn_margin_top">5dp</dimen>
     <dimen name="linear_btn_margin_bottom">10dp</dimen>
@@ -31,7 +28,7 @@
     <dimen name="homepage_btn_height">40dp</dimen>
     <dimen name="homepage_btn_text">10sp</dimen>
     <dimen name="homepage_btn_margin">50dp</dimen>
-    <dimen name="homepage_favorites_margin_top">375dp</dimen>
+    <dimen name="homepage_favorites_margin_top">350dp</dimen>
 
 
 <!--search page dimensions-->

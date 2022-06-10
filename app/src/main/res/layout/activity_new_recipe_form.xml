@@ -18,7 +18,7 @@ tools:context=".UpdateRecipe">
         android:text="@string/card_title_2"
         android:textColor="@color/white"
         android:textSize="@dimen/large_card_add_title_text"
-        android:fontFamily="@font/Roboto_Bold"
+        android:fontFamily="@font/roboto_bold"
         android:layout_marginTop="@dimen/large_card_margin"
 
         android:layout_gravity="center_horizontal"
@@ -109,7 +109,7 @@ tools:context=".UpdateRecipe">
                             android:text="@string/card_title"
                             android:textColor="@color/title_color"
                             android:textSize="@dimen/large_card_subtitle_text"
-                            android:fontFamily="@font/Montserrat_Bold"
+                            android:fontFamily="@font/montserrat_bold"
                             />
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
@@ -122,7 +122,7 @@ tools:context=".UpdateRecipe">
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
-                                android:fontFamily="@font/Montserrat_Regular"
+                                android:fontFamily="@font/montserrat_regular"
                                 app:errorEnabled="true" />
 
 
@@ -152,7 +152,7 @@ tools:context=".UpdateRecipe">
                             android:text="@string/card_subtitle_yield"
                             android:textColor="@color/title_color"
                             android:textSize="@dimen/large_card_subtitle_text"
-                            android:fontFamily="@font/Montserrat_Bold"
+                            android:fontFamily="@font/montserrat_bold"
                             />
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -166,7 +166,7 @@ tools:context=".UpdateRecipe">
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
-                                android:fontFamily="@font/Montserrat_Regular"
+                                android:fontFamily="@font/montserrat_regular"
                                 app:errorEnabled="true" />
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -188,7 +188,7 @@ tools:context=".UpdateRecipe">
                             android:text="@string/card_subtitle_prep"
                             android:textColor="@color/title_color"
                             android:textSize="@dimen/large_card_subtitle_text"
-                            android:fontFamily="@font/Montserrat_Bold"
+                            android:fontFamily="@font/montserrat_bold"
                             />
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -202,7 +202,7 @@ tools:context=".UpdateRecipe">
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
-                                android:fontFamily="@font/Montserrat_Regular"
+                                android:fontFamily="@font/montserrat_regular"
                                 app:errorEnabled="true" />
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -222,7 +222,7 @@ tools:context=".UpdateRecipe">
                             android:text="@string/card_subtitle_total"
                             android:textColor="@color/title_color"
                             android:textSize="@dimen/large_card_subtitle_text"
-                            android:fontFamily="@font/Montserrat_Bold"
+                            android:fontFamily="@font/montserrat_bold"
                             />
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -236,7 +236,7 @@ tools:context=".UpdateRecipe">
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
-                                android:fontFamily="@font/Montserrat_Regular"
+                                android:fontFamily="@font/montserrat_regular"
                                 app:errorEnabled="true" />
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -257,7 +257,7 @@ tools:context=".UpdateRecipe">
                             android:text="@string/card_subtitle_ingredients"
                             android:textColor="@color/title_color"
                             android:textSize="@dimen/large_card_subtitle_text"
-                            android:fontFamily="@font/Montserrat_Bold"
+                            android:fontFamily="@font/montserrat_bold"
                             />
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -272,7 +272,7 @@ tools:context=".UpdateRecipe">
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
                                 android:inputType="textMultiLine"
-                                android:fontFamily="@font/Montserrat_Regular"
+                                android:fontFamily="@font/montserrat_regular"
                                 app:errorEnabled="true" />
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
@@ -291,7 +291,7 @@ tools:context=".UpdateRecipe">
                             android:text="@string/card_subtitle_directions"
                             android:textColor="@color/title_color"
                             android:textSize="@dimen/large_card_subtitle_text"
-                            android:fontFamily="@font/Montserrat_Bold"
+                            android:fontFamily="@font/montserrat_bold"
                             />
 
                         <com.google.android.material.textfield.TextInputLayout
@@ -306,7 +306,7 @@ tools:context=".UpdateRecipe">
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
                                 android:inputType="textMultiLine"
-                                android:fontFamily="@font/Montserrat_Regular"
+                                android:fontFamily="@font/montserrat_regular"
                                 app:errorEnabled="true" />
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
@@ -336,7 +336,7 @@ tools:context=".UpdateRecipe">
                 android:text="@string/card_btn_add"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:fontFamily="@font/Roboto_Bold"
+                android:fontFamily="@font/roboto_bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -351,7 +351,7 @@ tools:context=".UpdateRecipe">
                 android:text="@string/card_btn_clear"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:fontFamily="@font/Roboto_Bold"
+                android:fontFamily="@font/roboto_bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
@@ -367,7 +367,7 @@ tools:context=".UpdateRecipe">
                 android:text="Cancel"
                 android:textAlignment="center"
                 android:textColor="@color/white"
-                android:fontFamily="@font/Roboto_Bold"
+                android:fontFamily="@font/roboto_bold"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintLeft_toLeftOf="parent"
                 app:layout_constraintRight_toRightOf="parent"
