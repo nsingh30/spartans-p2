@@ -10,6 +10,7 @@ import androidx.lifecycle.viewModelScope
 import com.example.recipegenie.RecipeResults
 import com.example.recipegenie.model.RecipeRepository
 import com.example.recipegenie.model.Recipe
+import com.example.recipegenie.view.FavoritesList
 import kotlinx.coroutines.launch
 
 class MainViewModel(app: Application): AndroidViewModel(app) {
@@ -24,6 +25,7 @@ class MainViewModel(app: Application): AndroidViewModel(app) {
 
     fun getSearchResults(offset: Int, limit: Int, tags: String, search: String)
     = viewModelScope.launch{
+
         searchResults = repo.getSearchResults(offset, limit, tags, search)
     }
 
