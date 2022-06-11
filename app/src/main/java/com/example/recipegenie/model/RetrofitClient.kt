@@ -12,8 +12,8 @@ import retrofit2.http.*
 interface RetrofitClient {
 
     @Headers(
-        "X-RapidAPI-Host: tasty.p.rapidapi.com",
-        "X-RapidAPI-Key: c3b669158emsh01efa766091fd72p197679jsndc6228d6e712"
+        API_HOST,
+        API_KEY
     )
     @GET("recipes/list")
     suspend fun getSearchResults(
