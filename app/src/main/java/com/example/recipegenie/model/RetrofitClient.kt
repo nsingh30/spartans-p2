@@ -13,15 +13,13 @@ interface RetrofitClient {
 
     @Headers(
         "X-RapidAPI-Host: tasty.p.rapidapi.com",
-        "X-RapidAPI-Key: c3b669158emsh01efa766091fd72p197679jsndc6228d6e712"
+        "X-RapidAPI-Key: db75eb83a9msh93dbb46be42c052p101d6djsn9c315c55bed5"
     )
     @GET("recipes/list")
     suspend fun getSearchResults(
         @Query("from") offset: Int, @Query("size") limit: Int,
         @Query("tags") tags: String, @Query("q") search: String
-    ) : LiveData<List<Recipe>>?
-
-//    ): Response<RecipeResults>
+    ): Response<RecipeResults>
 
     companion object {
         var BASE_URL = "https://tasty.p.rapidapi.com/"
