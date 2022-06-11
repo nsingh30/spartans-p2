@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/KB/AndroidStudioProjects/spartans-p2/app/src/main/res/layout/activity_camera.xml" value="0.1" />
         <entry key="..\:/Users/KB/AndroidStudioProjects/spartans-p2/app/src/main/res/layout/activity_favorites_list.xml" value="0.26458333333333334" />
+        <entry key="..\:/Users/KB/AndroidStudioProjects/spartans-p2/app/src/main/res/layout/activity_gallery.xml" value="0.26875" />
         <entry key="..\:/Users/KB/AndroidStudioProjects/spartans-p2/app/src/main/res/layout/activity_landing_page.xml" value="0.26458333333333334" />
         <entry key="..\:/Users/KB/AndroidStudioProjects/spartans-p2/app/src/main/res/layout/activity_main.xml" value="0.26458333333333334" />
         <entry key="..\:/Users/KB/AndroidStudioProjects/spartans-p2/app/src/main/res/layout/activity_new_recipe_form.xml" value="0.26458333333333334" />
@@ -11,6 +13,7 @@
         <entry key="..\:/Users/KB/AndroidStudioProjects/spartans-p2/app/src/main/res/layout/activity_search_recipes.xml" value="0.26458333333333334" />
         <entry key="..\:/Users/KB/AndroidStudioProjects/spartans-p2/app/src/main/res/layout/activity_update_recipe.xml" value="0.26458333333333334" />
         <entry key="..\:/Users/KB/AndroidStudioProjects/spartans-p2/app/src/main/res/layout/category_card_layout.xml" value="0.26458333333333334" />
+        <entry key="..\:/Users/KB/AndroidStudioProjects/spartans-p2/app/src/main/res/layout/list_item_img.xml" value="0.2677083333333333" />
         <entry key="..\:/Users/KB/AndroidStudioProjects/spartans-p2/app/src/main/res/layout/recipe_list_item_layout.xml" value="0.26458333333333334" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/drawable/card_2_background.xml" value="0.318" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/drawable/card_background.xml" value="0.2035" />

@@ -4,10 +4,11 @@ import android.content.DialogInterface
 import android.content.Intent
 import android.os.Bundle
 import android.widget.EditText
+import android.widget.ImageView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
-import com.example.projectp0.R
+
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class NewRecipeForm : AppCompatActivity() {
@@ -35,8 +36,9 @@ class NewRecipeForm : AppCompatActivity() {
         vm = MainViewModel(application)
 
         val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_add)
-       // val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
+        // val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
         val btnCancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
+        val recipe_image_view: ImageView = findViewById(R.id.recipe_image_view)
 
 
         btnSubmit.setOnClickListener {
@@ -52,17 +54,17 @@ class NewRecipeForm : AppCompatActivity() {
                 totalTime.isNullOrBlank() || ingredients.isNullOrBlank() ||
                 directions.isNullOrBlank()
             ) {
-                if(title.isNullOrBlank())
+                if (title.isNullOrBlank())
                     this.title.setError("Please Enter a recipe title")
-                if(rYield.isNullOrBlank())
+                if (rYield.isNullOrBlank())
                     this.rYield.setError("Please Enter number of servings")
-                if(prepTime.isNullOrBlank())
+                if (prepTime.isNullOrBlank())
                     this.prepTime.setError("Please Enter time it takes to prep ingredients")
-                if(totalTime.isNullOrBlank())
+                if (totalTime.isNullOrBlank())
                     this.totalTime.setError("Please Enter prep time + cook time")
-                if(ingredients.isNullOrBlank())
+                if (ingredients.isNullOrBlank())
                     this.ingredients.setError("Please the ingredient list")
-                if(directions.isNullOrBlank())
+                if (directions.isNullOrBlank())
                     this.directions.setError("Please Enter cooking steps")
 
                 val builder = AlertDialog.Builder(this)
@@ -72,7 +74,7 @@ class NewRecipeForm : AppCompatActivity() {
                 builder.setMessage("Please complete the form")
                 builder.setCancelable(true)
                 builder.setNegativeButton("OK", DialogInterface.OnClickListener
-                { dialog, which -> dialog.cancel()})
+                { dialog, which -> dialog.cancel() })
 
                 val alertDialog: AlertDialog = builder.create()
                 alertDialog.show()
@@ -119,5 +121,11 @@ class NewRecipeForm : AppCompatActivity() {
 //            totalTime.text.clear()
 //            ingredients.text.clear()
 //            directions.text.clear()
+
+
+        recipe_image_view.setOnClickListener {
+            val intent = Intent(this, Camera::class.java)
+            startActivity(intent)
         }
     }
+}
