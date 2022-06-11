@@ -48,6 +48,12 @@ class MainActivity : AppCompatActivity() {
             Log.d("MainActivity", "DB recipeList detected")
         }
 
+    viewModel.getSearchResults(0, 1, "", "chicken")
+    viewModel.searchResults.observe(this){
+        var str : String = it.results[0].name
+        favoritesTextView.text = str
+    }
+
 
 
 
