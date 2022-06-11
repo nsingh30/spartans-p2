@@ -1,6 +1,7 @@
 package com.example.recipegenie.model
 
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.room.*
 
 @Dao
@@ -10,7 +11,7 @@ interface RecipeDao {
     fun insertRecipe(recipe: Recipe)
     // Read
     @Query("select * from recipes")
-    fun selectRecipe(): LiveData<List<Recipe>>
+    fun selectRecipe(): LiveData<List<Recipe>>?
 
     // Update
     @Update

@@ -1,6 +1,9 @@
 package com.example.recipegenie
 
 
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.example.recipegenie.model.Recipe
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -16,7 +19,9 @@ interface RetrofitClient {
     suspend fun getSearchResults(
         @Query("from") offset: Int, @Query("size") limit: Int,
         @Query("tags") tags: String, @Query("q") search: String
-    ): Response<RecipeResults>
+    ) : LiveData<List<Recipe>>?
+
+//    ): Response<RecipeResults>
 
     companion object {
         var BASE_URL = "https://tasty.p.rapidapi.com/"
@@ -26,8 +31,6 @@ interface RetrofitClient {
                 .addConverterFactory(GsonConverterFactory.create())
                 .baseUrl(BASE_URL)
                 .build()
-
-            println("inside RetroApiInterface create")
 
             return retrofit.create(RetrofitClient::class.java)
         }

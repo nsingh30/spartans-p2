@@ -1,5 +1,6 @@
 package com.example.recipegenie
 
+// This is the pojo that contains the search resultsgit
 
 import java.util.*
 import kotlin.collections.ArrayList
