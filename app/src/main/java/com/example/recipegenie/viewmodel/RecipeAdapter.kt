@@ -5,17 +5,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
-<<<<<<< HEAD
 import com.example.recipegenie.R
 import com.example.recipegenie.model.Recipe
-=======
-<<<<<<< HEAD:app/src/main/java/com/example/recipegenie/RecipeAdapter.kt
-import com.example.projectp0.R
-=======
-import com.example.recipegenie.R
-import com.example.recipegenie.model.Recipe
->>>>>>> origin:app/src/main/java/com/example/recipegenie/viewmodel/RecipeAdapter.kt
->>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0
 
 class RecipeAdapter (private val onCardClick: (position: Int) -> Unit,
                     private val recipeList: List<Recipe>)

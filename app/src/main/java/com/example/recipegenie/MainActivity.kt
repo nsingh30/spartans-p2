@@ -12,7 +12,6 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
 import androidx.recyclerview.widget.RecyclerView
-<<<<<<< HEAD
 import com.example.recipegenie.model.Recipe
 import com.example.recipegenie.model.RecipeRepository
 import com.example.recipegenie.view.FavoritesList
@@ -20,9 +19,6 @@ import com.example.recipegenie.view.RecipePage
 import com.example.recipegenie.viewmodel.MainViewModel
 import com.example.recipegenie.viewmodel.RecipeAdapter
 import com.example.recipegenie.viewmodel.RecipeListGenerator
-=======
-import com.example.projectp0.R
->>>>>>> main
 
 
 class MainActivity : AppCompatActivity() {
