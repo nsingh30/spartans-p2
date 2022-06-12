@@ -169,7 +169,7 @@ tools:context=".UpdateRecipe">
                             >
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/edit_text_total_time"
+                                android:id="@+id/edit_text_cook_time"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

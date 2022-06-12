@@ -29,7 +29,7 @@ class RecipeAdapter (private val onCardClick: (position: Int) -> Unit,
         val recipe = recipeList[position]
         holder.idTextView.text = recipe.recipeId.toString()
         holder.titleTextView.text = recipe.title
-        holder.yieldTextView.text = recipe.rYield
+        holder.yieldTextView.text = recipe.yields
         holder.prepTimeTextView.text = recipe.prepTime
         holder.totalTimeTextView.text = recipe.totalTime
     }

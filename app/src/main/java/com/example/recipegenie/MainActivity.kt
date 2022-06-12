@@ -6,6 +6,8 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.TextView
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.OrientationHelper
@@ -16,29 +18,55 @@ import com.example.recipegenie.view.FavoritesList
 import com.example.recipegenie.view.RecipePage
 import com.example.recipegenie.viewmodel.MainViewModel
 import com.example.recipegenie.viewmodel.RecipeAdapter
+import com.example.recipegenie.viewmodel.RecipeListGenerator
 
 
 class MainActivity : AppCompatActivity() {
-    //    //
+
     var recipeList = ArrayList<Recipe>()
-//    var vm = MainViewModel(application)
+
+    //    var vm = MainViewModel(application)
 ////    lateinit var adapter: RecipeAdapter
 //////
 ////
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-//
+//Test Room DB
         var categoryTextView: TextView = findViewById(R.id.text_view_categories)
         var favoritesTextView: TextView = findViewById(R.id.text_view_favorites)
         var viewModel = MainViewModel(application)
         var recipe = Recipe(
-            null, "sample recipe 1", "6 servings",
-            "10 mins", "35 mins", "1 whole chicken",
-            "Cook it well"
+            null,
+            false,
+            "Sample Chicken Recipe from DB",
+            "6 servings",
+            "10 mins",
+            "35 mins",
+            "45 mins",
+            "1 whole chicken\n" +
+                    "1/2 Onion\n" +
+                    "3 tomatoes\n" +
+                    "2 potatoes\n" +
+                    "3 carrorts\n" +
+                    "salt and pepper",
+            "Step 1: Prep the chicken\n" +
+                    "Step 2: Prep the veggies\n" +
+                    "Step 3: prep the pot\n" +
+                    "Step 4: Cook it well",
+            "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/" +
+                    "video-api/assets/351171.jpg"
         )
 
         viewModel.insertRecipes(recipe)
+
+//        var recipeGenerator = RecipeListGenerator()
+//        var recipeList = recipeGenerator.makeList(this, viewModel.recipeList)
+
+      //  favoritesTextView.text = recipeList[0].title
+
+
+
         viewModel.recipeList?.observe(this) { recipeList ->
             getRecipe(recipeList)
 
@@ -47,15 +75,13 @@ class MainActivity : AppCompatActivity() {
             categoryTextView.text = myRecipeTitle
             Log.d("MainActivity", "DB recipeList detected")
         }
-
-    viewModel.getSearchResults(0, 1, "", "chicken")
-    viewModel.searchResults.observe(this){
-        var str : String = it.results[0].name
-        favoritesTextView.text = str
-    }
-
-
-
+//
+//        viewModel.getSearchResults(0, 1, "", "chicken")
+//
+//        viewModel.searchResults.observe(this) {
+//            var str: String = it.results[0].name
+//            favoritesTextView.text = str
+//        }
 
 
 ////    val apiClient = RetrofitClient.create()
@@ -104,17 +130,19 @@ class MainActivity : AppCompatActivity() {
 ////            startActivity(intent)
 ////        }
     }
-//
+
+    //
 //    fun onCardClick(position: Int) {
 //        println("position:::$position")
 //        val myIntent = Intent(this, RecipePage::class.java)
 //        startActivity(myIntent)
 //    }
 //
-        fun getRecipe(recipeList: List<Recipe>) {
-            this.recipeList.clear()
-            this.recipeList.addAll(recipeList)
+    fun getRecipe(recipeList: List<Recipe>) {
+        this.recipeList.clear()
+        this.recipeList.addAll(recipeList)
 //            adapter.notifyDataSetChanged()
-        }
+    }
 
 }
+

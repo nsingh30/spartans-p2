@@ -12,6 +12,8 @@ import com.example.recipegenie.model.Recipe
 import com.example.recipegenie.viewmodel.MainViewModel
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
+//TODO: Need to customize page to display from all sources
+
 class RecipePage : AppCompatActivity() {
     lateinit var vm: MainViewModel
 
@@ -74,7 +76,7 @@ class RecipePage : AppCompatActivity() {
         // Map TextViews in recipe page
         var id: TextView = findViewById(R.id.id)
         var title: TextView = findViewById(R.id.title)
-        var rYield: TextView = findViewById(R.id.r_yield)
+        var yields: TextView = findViewById(R.id.r_yield)
         var prepTime: TextView = findViewById(R.id.prep_time)
         var totalTime: TextView = findViewById(R.id.total_time)
         var ingredients: TextView = findViewById(R.id.ingredients)
@@ -84,19 +86,23 @@ class RecipePage : AppCompatActivity() {
         var recipe: List<Recipe> =
             repo.findRecipeWithTitle(intent.getStringExtra("title").toString())
 
+        //TODO: Null validation
+
         // Populate Text Views with recipe fields
         id.text = recipe[0].recipeId.toString()
         title.text = recipe[0].title
-        rYield.text = recipe[0].rYield
+        yields.text = recipe[0].yields
         prepTime.text = recipe[0].prepTime
         totalTime.text = recipe[0].totalTime
         ingredients.text = recipe[0].ingredients
         directions.text = recipe[0].directions
 
+        //TODO need to calculate cook time and URL
+
         return Recipe(
-            id.text.toString().toInt(), title.text.toString(), rYield.text.toString(),
-            prepTime.text.toString(), totalTime.text.toString(), ingredients.text.toString(),
-            directions.text.toString()
+            id.text.toString().toInt(), false, title.text.toString(), yields.text.toString(),
+            prepTime.text.toString(),"Need to calculate", totalTime.text.toString(),
+            ingredients.text.toString(), directions.text.toString(), "get URL"
         )
     }
 }
