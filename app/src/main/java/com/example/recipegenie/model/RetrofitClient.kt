@@ -13,7 +13,7 @@ interface RetrofitClient {
 
     @Headers(
         API_HOST,
-        API_KEY"
+        API_KEY
     )
     @GET("recipes/list")
     suspend fun getSearchResults(
