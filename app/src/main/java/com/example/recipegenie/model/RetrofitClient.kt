@@ -12,8 +12,13 @@ import retrofit2.http.*
 interface RetrofitClient {
 
     @Headers(
+<<<<<<< HEAD
         "X-RapidAPI-Host: tasty.p.rapidapi.com",
         "X-RapidAPI-Key: c3b669158emsh01efa766091fd72p197679jsndc6228d6e712"
+=======
+        API_HOST,
+        API_KEY
+>>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0
     )
     @GET("recipes/list")
     suspend fun getSearchResults(
@@ -35,4 +40,8 @@ interface RetrofitClient {
             return retrofit.create(RetrofitClient::class.java)
         }
     }
+<<<<<<< HEAD
 }
+=======
+}
+>>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0

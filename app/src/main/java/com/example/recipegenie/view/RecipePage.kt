@@ -5,11 +5,21 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:app/src/main/java/com/example/recipegenie/RecipePage.kt
+import com.example.projectp0.R
+=======
+>>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0
 import com.example.recipegenie.R
 import com.example.recipegenie.model.RecipeRepository
 import com.example.recipegenie.UpdateRecipe
 import com.example.recipegenie.model.Recipe
 import com.example.recipegenie.viewmodel.MainViewModel
+<<<<<<< HEAD
+=======
+>>>>>>> origin:app/src/main/java/com/example/recipegenie/view/RecipePage.kt
+>>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class RecipePage : AppCompatActivity() {
@@ -27,11 +37,25 @@ class RecipePage : AppCompatActivity() {
         //populate TextFields with recipe data from repo and get recipeID as a String
         var recipe: Recipe = getData(repo)
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD:app/src/main/java/com/example/recipegenie/RecipePage.kt
+        val btnHome: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
+        btnHome.setOnClickListener {
+            val intent: Intent = Intent(this, MainActivity::class.java)
+            startActivity(intent)
+        }
+=======
+>>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0
 //        val btnHome: ExtendedFloatingActionButton = findViewById(R.id.btn_home)
 //        btnHome.setOnClickListener {
 //            val intent: Intent = Intent(this, MainActivity::class.java)
 //            startActivity(intent)
 //        }
+<<<<<<< HEAD
+=======
+>>>>>>> origin:app/src/main/java/com/example/recipegenie/view/RecipePage.kt
+>>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0
 
         val btnEdit: ExtendedFloatingActionButton = findViewById(R.id.btn_edit)
         btnEdit.setOnClickListener {
