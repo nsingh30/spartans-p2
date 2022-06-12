@@ -73,11 +73,8 @@ class MainActivity : AppCompatActivity() {
             categoryTextView.text = myRecipeTitle
             Log.d("MainActivity", "DB recipeList detected")
         }
-//
-<<<<<<< HEAD
-=======
+
 //        from API
->>>>>>> main
         viewModel.getSearchResults(0, 1, "", "chicken")
 
         viewModel.searchResults.observe(this) {
