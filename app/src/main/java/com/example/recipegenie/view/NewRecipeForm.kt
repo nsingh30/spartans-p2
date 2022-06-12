@@ -1,4 +1,4 @@
-package com.example.recipegenie
+package com.example.recipegenie.view
 
 import android.content.DialogInterface
 import android.content.Intent
@@ -7,7 +7,13 @@ import android.widget.EditText
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+<<<<<<< HEAD:app/src/main/java/com/example/recipegenie/NewRecipeForm.kt
 import com.example.projectp0.R
+=======
+import com.example.recipegenie.R
+import com.example.recipegenie.model.Recipe
+import com.example.recipegenie.viewmodel.MainViewModel
+>>>>>>> origin:app/src/main/java/com/example/recipegenie/view/NewRecipeForm.kt
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 
 class NewRecipeForm : AppCompatActivity() {
@@ -34,12 +40,17 @@ class NewRecipeForm : AppCompatActivity() {
 
         vm = MainViewModel(application)
 
+<<<<<<< HEAD:app/src/main/java/com/example/recipegenie/NewRecipeForm.kt
         val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_add)
        // val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
+=======
+//        val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_submit)
+//        val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
+>>>>>>> origin:app/src/main/java/com/example/recipegenie/view/NewRecipeForm.kt
         val btnCancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
 
 
-        btnSubmit.setOnClickListener {
+//        btnSubmit.setOnClickListener {
 
             val title: String = title.text.toString()
             val rYield: String = rYield.text.toString()
@@ -102,16 +113,25 @@ class NewRecipeForm : AppCompatActivity() {
             }
         }
 
-        btnCancel.setOnClickListener {
-            val intent = Intent(this, FavoritesList::class.java)
-            startActivity(intent)
+//        btnCancel.setOnClickListener {
+//            val intent = Intent(this, FavoritesList::class.java)
+//            startActivity(intent)
+//
+//            val message = "cancelled"
+//            val duration = Toast.LENGTH_LONG
+//            val toast = Toast.makeText(applicationContext, message, duration)
+//            toast.show()
+//        }
 
+<<<<<<< HEAD:app/src/main/java/com/example/recipegenie/NewRecipeForm.kt
             val message = "cancelled"
             val duration = Toast.LENGTH_LONG
             val toast = Toast.makeText(applicationContext, message, duration)
             toast.show()
         }
 
+=======
+>>>>>>> origin:app/src/main/java/com/example/recipegenie/view/NewRecipeForm.kt
 //        btnClear.setOnClickListener {
 //            title.text.clear()
 //            rYield.text.clear()
@@ -119,5 +139,11 @@ class NewRecipeForm : AppCompatActivity() {
 //            totalTime.text.clear()
 //            ingredients.text.clear()
 //            directions.text.clear()
+<<<<<<< HEAD:app/src/main/java/com/example/recipegenie/NewRecipeForm.kt
         }
     }
+=======
+//        }
+//    }
+}
+>>>>>>> origin:app/src/main/java/com/example/recipegenie/view/NewRecipeForm.kt

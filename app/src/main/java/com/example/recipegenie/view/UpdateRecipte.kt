@@ -5,7 +5,14 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
+<<<<<<< HEAD:app/src/main/java/com/example/recipegenie/UdateRecipte.kt
 import com.example.projectp0.R
+=======
+import com.example.recipegenie.model.Recipe
+import com.example.recipegenie.model.RecipeRepository
+import com.example.recipegenie.view.FavoritesList
+import com.example.recipegenie.viewmodel.MainViewModel
+>>>>>>> origin:app/src/main/java/com/example/recipegenie/view/UpdateRecipte.kt
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
 import com.google.android.material.textfield.TextInputEditText
 
@@ -66,7 +73,7 @@ class UpdateRecipe : AppCompatActivity() {
             RecipeRepository(this)
         }
         // Map TextViews in recipe page
-        id = findViewById(R.id.text_view_id)
+//        id = findViewById(R.id.text_view_id)
         title = findViewById(R.id.edit_text_title)
         rYield = findViewById(R.id.edit_text_yield)
         prepTime = findViewById(R.id.edit_text_prep_time)

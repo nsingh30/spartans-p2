@@ -6,7 +6,11 @@
     android:layout_height="match_parent"
     android:background="@color/background_color"
     android:orientation="vertical"
+<<<<<<< HEAD
     tools:context="com.example.recipegenie.RecipePage">
+=======
+    tools:context=".view.RecipePage">
+>>>>>>> origin
 
     <ScrollView
         android:layout_width="match_parent"
@@ -60,7 +64,7 @@
                             android:layout_width="@dimen/drawable_star_size"
                             android:layout_height="@dimen/drawable_star_size"
                             android:layout_gravity="end"
-                            android:src=""/>
+                            android:src="@mipmap/fav_heart"/>
 
                     </LinearLayout>
 

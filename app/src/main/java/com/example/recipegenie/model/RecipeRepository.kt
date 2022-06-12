@@ -1,12 +1,25 @@
-package com.example.recipegenie
+package com.example.recipegenie.model
 
 import android.content.Context
 import androidx.lifecycle.LiveData
+import androidx.lifecycle.MutableLiveData
+import com.example.recipegenie.RetrofitClient
 
-class RecipeRepository (context: Context){
-    var db:RecipeDao? = AppDatabase.getInstance(context)?.recipeDao()
+class RecipeRepository(context: Context) {
 
+    var db: RecipeDao? = AppDatabase.getInstance(context)?.recipeDao()
+    var retrofitClient = RetrofitClient.create()
+
+    // Gets recipes from API
+    suspend fun getSearchResults(offset: Int, limit: Int, tags: String, q: String)
+            : LiveData<List<Recipe>>? {
+
+        return retrofitClient.getSearchResults(offset, limit, tags, q)
+    }
+
+    // Gets recipes from Room DB
     fun getAllRecipes(): LiveData<List<Recipe>>? {
+
         return db?.selectRecipe()
     }
 
@@ -22,7 +35,7 @@ class RecipeRepository (context: Context){
         db?.deleteRecipe(recipe)
     }
 
-    fun deleteAll(){
+    fun deleteAll() {
         db?.deleteAll()
     }
 

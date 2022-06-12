@@ -1,11 +1,16 @@
-package com.example.recipegenie
+package com.example.recipegenie.viewmodel
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+<<<<<<< HEAD:app/src/main/java/com/example/recipegenie/RecipeAdapter.kt
 import com.example.projectp0.R
+=======
+import com.example.recipegenie.R
+import com.example.recipegenie.model.Recipe
+>>>>>>> origin:app/src/main/java/com/example/recipegenie/viewmodel/RecipeAdapter.kt
 
 class RecipeAdapter (private val onCardClick: (position: Int) -> Unit,
                     private val recipeList: List<Recipe>)

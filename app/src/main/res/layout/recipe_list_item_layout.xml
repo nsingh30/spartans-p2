@@ -26,7 +26,7 @@
             android:layout_height="@dimen/image_size"
             android:layout_margin="@dimen/margin_card_small"
 
-            android:src=""/>
+            android:src="@mipmap/fav_heart"/>
 
         <LinearLayout
             android:layout_width="match_parent"
