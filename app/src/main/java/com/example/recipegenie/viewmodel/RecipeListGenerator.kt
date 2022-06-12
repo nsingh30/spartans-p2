@@ -53,8 +53,16 @@ class RecipeListGenerator {
                     var totalTime: String = "${it.results[index].total_time_minutes} minutes"
                     var imageUrl: String = it.results[index].thumbnail_url
 
-                    recipe = Recipe(id,isFavorite, name, yields, prepTime, coockTime,
-                                        totalTime, ingredients, directions, imageUrl)
+                    recipe.recipeId = id
+                    recipe.isFavorite = isFavorite
+                    recipe.title =name
+                    recipe.yields = yields
+                    recipe.prepTime = prepTime
+                    recipe.cookTime = coockTime
+                    recipe.totalTime = totalTime
+                    recipe.ingredients = ingredients
+                    recipe.directions = directions
+                    recipe.imageUrl = imageUrl
                 }
                 recipeList.add(recipe)
             }

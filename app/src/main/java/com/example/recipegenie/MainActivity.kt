@@ -62,9 +62,9 @@ class MainActivity : AppCompatActivity() {
 
 //        var recipeGenerator = RecipeListGenerator()
 //        var recipeList = recipeGenerator.makeList(this, viewModel.recipeList)
-
-      //  favoritesTextView.text = recipeList[0].title
-
+//
+//        favoritesTextView.text = recipeList[0].title
+//
 
 
         viewModel.recipeList?.observe(this) { recipeList ->
@@ -76,12 +76,12 @@ class MainActivity : AppCompatActivity() {
             Log.d("MainActivity", "DB recipeList detected")
         }
 //
-//        viewModel.getSearchResults(0, 1, "", "chicken")
-//
-//        viewModel.searchResults.observe(this) {
-//            var str: String = it.results[0].name
-//            favoritesTextView.text = str
-//        }
+        viewModel.getSearchResults(0, 1, "", "chicken")
+
+        viewModel.searchResults.observe(this) {
+            var str: String = it.results[0].name
+            favoritesTextView.text = str
+        }
 
 
 ////    val apiClient = RetrofitClient.create()
