@@ -66,22 +66,21 @@ class MainActivity : AppCompatActivity() {
       //  favoritesTextView.text = recipeList[0].title
 
 
-
+//      From Room db
         viewModel.recipeList?.observe(this) { recipeList ->
             getRecipe(recipeList)
-
-
             var myRecipeTitle = recipeList[0].title
             categoryTextView.text = myRecipeTitle
             Log.d("MainActivity", "DB recipeList detected")
         }
 //
-//        viewModel.getSearchResults(0, 1, "", "chicken")
-//
-//        viewModel.searchResults.observe(this) {
-//            var str: String = it.results[0].name
-//            favoritesTextView.text = str
-//        }
+//        from API
+        viewModel.getSearchResults(0, 1, "", "chicken")
+
+        viewModel.searchResults.observe(this) {
+            var str: String = it.results[0].name
+            favoritesTextView.text = str
+        }
 
 
 ////    val apiClient = RetrofitClient.create()
