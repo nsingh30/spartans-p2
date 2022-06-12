@@ -5,16 +5,24 @@ import android.os.Bundle
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:app/src/main/java/com/example/recipegenie/RecipePage.kt
 import com.example.projectp0.R
 =======
+>>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0
 import com.example.recipegenie.R
 import com.example.recipegenie.model.RecipeRepository
 import com.example.recipegenie.UpdateRecipe
 import com.example.recipegenie.model.Recipe
 import com.example.recipegenie.viewmodel.MainViewModel
+<<<<<<< HEAD
+=======
 >>>>>>> origin:app/src/main/java/com/example/recipegenie/view/RecipePage.kt
+>>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0
 import com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+
+//TODO: Need to customize page to display from all sources
 
 class RecipePage : AppCompatActivity() {
     lateinit var vm: MainViewModel
@@ -31,6 +39,8 @@ class RecipePage : AppCompatActivity() {
         //populate TextFields with recipe data from repo and get recipeID as a String
         var recipe: Recipe = getData(repo)
 
+<<<<<<< HEAD
+=======
 <<<<<<< HEAD:app/src/main/java/com/example/recipegenie/RecipePage.kt
         val btnHome: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
         btnHome.setOnClickListener {
@@ -38,12 +48,16 @@ class RecipePage : AppCompatActivity() {
             startActivity(intent)
         }
 =======
+>>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0
 //        val btnHome: ExtendedFloatingActionButton = findViewById(R.id.btn_home)
 //        btnHome.setOnClickListener {
 //            val intent: Intent = Intent(this, MainActivity::class.java)
 //            startActivity(intent)
 //        }
+<<<<<<< HEAD
+=======
 >>>>>>> origin:app/src/main/java/com/example/recipegenie/view/RecipePage.kt
+>>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0
 
         val btnEdit: ExtendedFloatingActionButton = findViewById(R.id.btn_edit)
         btnEdit.setOnClickListener {
@@ -86,7 +100,7 @@ class RecipePage : AppCompatActivity() {
         // Map TextViews in recipe page
         var id: TextView = findViewById(R.id.id)
         var title: TextView = findViewById(R.id.title)
-        var rYield: TextView = findViewById(R.id.r_yield)
+        var yields: TextView = findViewById(R.id.r_yield)
         var prepTime: TextView = findViewById(R.id.prep_time)
         var totalTime: TextView = findViewById(R.id.total_time)
         var ingredients: TextView = findViewById(R.id.ingredients)
@@ -96,19 +110,23 @@ class RecipePage : AppCompatActivity() {
         var recipe: List<Recipe> =
             repo.findRecipeWithTitle(intent.getStringExtra("title").toString())
 
+        //TODO: Null validation
+
         // Populate Text Views with recipe fields
         id.text = recipe[0].recipeId.toString()
         title.text = recipe[0].title
-        rYield.text = recipe[0].rYield
+        yields.text = recipe[0].yields
         prepTime.text = recipe[0].prepTime
         totalTime.text = recipe[0].totalTime
         ingredients.text = recipe[0].ingredients
         directions.text = recipe[0].directions
 
+        //TODO need to calculate cook time and URL
+
         return Recipe(
-            id.text.toString().toInt(), title.text.toString(), rYield.text.toString(),
-            prepTime.text.toString(), totalTime.text.toString(), ingredients.text.toString(),
-            directions.text.toString()
+            id.text.toString().toInt(), false, title.text.toString(), yields.text.toString(),
+            prepTime.text.toString(),"Need to calculate", totalTime.text.toString(),
+            ingredients.text.toString(), directions.text.toString(), "get URL"
         )
     }
 }
