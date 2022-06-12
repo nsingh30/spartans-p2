@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".MainActivity">
+    tools:context="com.example.recipegenie.MainActivity">
 
 
     <LinearLayout
@@ -58,6 +58,7 @@
         android:layout_marginRight="10dp">
 
         <TextView
+            android:id="@+id/text_view_categories"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Categories"
@@ -120,6 +121,7 @@
         android:layout_marginRight="10dp">
 
         <TextView
+            android:id="@+id/text_view_favorites"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Favorites"

@@ -1,23 +1,41 @@
 package com.example.recipegenie.model
 
 import android.content.Context
+import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
+import com.example.recipegenie.RecipeResults
 import com.example.recipegenie.RetrofitClient
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class RecipeRepository(context: Context) {
 
     var db: RecipeDao? = AppDatabase.getInstance(context)?.recipeDao()
     var retrofitClient = RetrofitClient.create()
+    var searchResults = MutableLiveData<RecipeResults>()
 
-    // Gets recipes from API
-    suspend fun getSearchResults(offset: Int, limit: Int, tags: String, q: String)
-            : LiveData<List<Recipe>>? {
+    // Gets recipes from API and returns MutableLiveData<RecipeResults>
+    fun getSearchResults(offset: Int, limit: Int, tags: String, q: String) :
+    MutableLiveData<RecipeResults>{
+        CoroutineScope(Dispatchers.IO).launch {
 
-        return retrofitClient.getSearchResults(offset, limit, tags, q)
+            var res = retrofitClient.getSearchResults(offset, limit, tags, q)
+
+            if(res.isSuccessful) {
+                searchResults.postValue(res.body())
+                Log.d("Retrofit Response", "Successful")
+
+            } else {
+                Log.d("Retrofit Response", "unsuccessful: RecipeRepository: Line 30")
+            }
+        }
+        return searchResults
     }
 
-    // Gets recipes from Room DB
+
+    // Gets recipes from Room DB and returns LiveData<List<Recipe>>
     fun getAllRecipes(): LiveData<List<Recipe>>? {
 
         return db?.selectRecipe()

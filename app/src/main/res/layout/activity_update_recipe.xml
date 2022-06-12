@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/background_color"
     android:orientation="vertical"
-    tools:context=".UpdateRecipe">
+    tools:context="com.example.recipegenie.UpdateRecipe">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -46,7 +46,7 @@
                             android:textSize="@dimen/text_small" />
 
                         <TextView
-                            android:id="@+id/id"
+                            android:id="@+id/text_view_id"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
@@ -169,7 +169,7 @@
                             >
 
                             <com.google.android.material.textfield.TextInputEditText
-                                android:id="@+id/edit_text_total_time"
+                                android:id="@+id/edit_text_cook_time"
                                 style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"

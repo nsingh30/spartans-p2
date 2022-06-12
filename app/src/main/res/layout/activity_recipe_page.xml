@@ -6,7 +6,15 @@
     android:layout_height="match_parent"
     android:background="@color/background_color"
     android:orientation="vertical"
+<<<<<<< HEAD
     tools:context=".view.RecipePage">
+=======
+<<<<<<< HEAD
+    tools:context="com.example.recipegenie.RecipePage">
+=======
+    tools:context=".view.RecipePage">
+>>>>>>> origin
+>>>>>>> 747e91718e6bcebec2a63430b0f83a733afc7ce0
 
     <ScrollView
         android:layout_width="match_parent"

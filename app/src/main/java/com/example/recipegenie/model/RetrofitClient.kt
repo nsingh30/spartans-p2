@@ -19,9 +19,7 @@ interface RetrofitClient {
     suspend fun getSearchResults(
         @Query("from") offset: Int, @Query("size") limit: Int,
         @Query("tags") tags: String, @Query("q") search: String
-    ) : LiveData<List<Recipe>>?
-
-//    ): Response<RecipeResults>
+    ): Response<RecipeResults>
 
     companion object {
         var BASE_URL = "https://tasty.p.rapidapi.com/"
