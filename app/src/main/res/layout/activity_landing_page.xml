@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/background_color"
-    tools:context=".view.Landing_page">
+    tools:context="com.example.recipegenie.view.LandingPage">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -67,18 +67,17 @@
         android:src="@drawable/groceries_3" />
 
     <Button
-        android:id="@+id/sign_in_btn"
+        android:id="@+id/btn_sign_in"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:text="Sign In"
-        android:textSize="20sp"
-        android:layout_marginRight="50dp"
-       android:layout_alignParentBottom="true"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
+        android:layout_marginRight="50dp"
         android:layout_marginBottom="100dp"
         android:background="@drawable/sign_in_btn"
-        app:backgroundTint="@null"
-        />
+        android:text="Sign In"
+        android:textSize="20sp"
+        app:backgroundTint="@null" />
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

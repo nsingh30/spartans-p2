@@ -1,4 +1,4 @@
-package com.example.recipegenie
+package com.example.recipegenie.model
 
 // This is the pojo that contains the search resultsgit
 

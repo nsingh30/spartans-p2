@@ -1,9 +1,6 @@
-package com.example.recipegenie
+package com.example.recipegenie.model
 
-
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import com.example.recipegenie.model.Recipe
+import com.example.recipegenie.BuildConfig
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
@@ -12,9 +9,8 @@ import retrofit2.http.*
 interface RetrofitClient {
 
     @Headers(
-        //TODO: Add API Host and key
-        "X-RapidAPI-Host: tasty.p.rapidapi.com",
-        "X-RapidAPI-Key: 88f0ee42bdmshe72e6378505fa4ep172a56jsn007762817dcc"
+        BuildConfig.HOST,
+        BuildConfig.KEY
     )
     @GET("recipes/list")
     suspend fun getSearchResults(

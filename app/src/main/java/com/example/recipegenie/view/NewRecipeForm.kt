@@ -35,7 +35,6 @@ class NewRecipeForm : AppCompatActivity() {
         directions = findViewById(R.id.edit_text_directions)
 
         vm = MainViewModel(application)
-
         val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_add)
 //        val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
         val btnCancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
@@ -88,7 +87,7 @@ class NewRecipeForm : AppCompatActivity() {
                     yields,
                     prepTime,
                     cookTime,
-                    prepTime+cookTime, //TODO: need to calculate total time
+                    prepTime + cookTime, //TODO: need to calculate total time
                     ingredients,
                     directions,
                     ""
@@ -117,6 +116,12 @@ class NewRecipeForm : AppCompatActivity() {
 //            toast.show()
 //        }
 
+        val message = "cancelled"
+        val duration = Toast.LENGTH_LONG
+        val toast = Toast.makeText(applicationContext, message, duration)
+        toast.show()
+    }
+
 //        btnClear.setOnClickListener {
 //            title.text.clear()
 //            rYield.text.clear()
@@ -124,7 +129,4 @@ class NewRecipeForm : AppCompatActivity() {
 //            totalTime.text.clear()
 //            ingredients.text.clear()
 //            directions.text.clear()
-//        }
-//    }
-    }
 }
