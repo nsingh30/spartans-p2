@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
 //        var recipeList = recipeGenerator.makeList(this, viewModel.recipeList)
 //
 //        favoritesTextView.text = recipeList[0].title
-//      From Room db
+        // From Room db
         viewModel.recipeList?.observe(this) { recipeList ->
             getRecipe(recipeList)
             var myRecipeTitle = recipeList[0].title
@@ -82,10 +82,20 @@ class MainActivity : AppCompatActivity() {
         }
         viewModel.getSearchResults(0, 1, "", "chicken")
 
+
+        // From API
+        var apiRecipeList = ArrayList<Recipe>()
         viewModel.searchResults.observe(this) {
-            var str: String = it.results[0].name
+
+            var recipeGenerator = RecipeListGenerator()
+            apiRecipeList = recipeGenerator.makeList(it)
+
+            var str: String = apiRecipeList[0].title
+
             favoritesTextView.text = str
         }
+
+
 
 
 ////    val apiClient = RetrofitClient.create()
