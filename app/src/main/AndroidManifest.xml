@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.recipeGenie">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.SearchRecipes"
             android:exported="false" />
         <activity
@@ -40,8 +43,8 @@
         </activity>
 
         <meta-data
-            android:name = "keyValue"
-            android:value = "${KEY}"/>
+            android:name="keyValue"
+            android:value="${KEY}" />
     </application>
 
 </manifest>
