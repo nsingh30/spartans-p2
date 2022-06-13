@@ -28,10 +28,20 @@ class UpdateRecipe : AppCompatActivity() {
         // unwrap Intent
         getData()
 
-        val btnUpdate: ExtendedFloatingActionButton = findViewById(R.id.btn_update)
-        val btnCancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
+        val btn_update: ExtendedFloatingActionButton = findViewById(R.id.btn_update)
+        val btn_cancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
+        val btn_clear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
 
-        btnCancel.setOnClickListener {
+        btn_clear.setOnClickListener {
+            title.text?.clear()
+            rYield.text?.clear()
+            prepTime.text?.clear()
+            totalTime.text?.clear()
+            ingredients.text?.clear()
+            directions.text?.clear()
+        }
+
+        btn_cancel.setOnClickListener {
             val message = "cancelled"
             val duration = Toast.LENGTH_LONG
             val toast = Toast.makeText(applicationContext, message, duration)
@@ -42,7 +52,7 @@ class UpdateRecipe : AppCompatActivity() {
         }
 
 
-        btnUpdate.setOnClickListener {
+        btn_update.setOnClickListener {
             var recipe = Recipe(
                 id.text.toString().toInt(), title.text.toString(),
                 rYield.text.toString(), prepTime.text.toString(), totalTime.text.toString(),

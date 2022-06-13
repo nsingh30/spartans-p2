@@ -22,16 +22,16 @@ class RecipePage : AppCompatActivity() {
         //populate TextFields with recipe data from repo and get recipeID as a String
         var recipe: Recipe = getData(repo)
 
-        val btnEdit: ExtendedFloatingActionButton = findViewById(R.id.btn_edit)
-        btnEdit.setOnClickListener {
+        val btn_edit: ExtendedFloatingActionButton = findViewById(R.id.btn_edit)
+        btn_edit.setOnClickListener {
             val intent: Intent = Intent(this, UpdateRecipe::class.java)
             intent.putExtra("title", recipe.title)
             startActivity(intent)
         }
 
 
-        val btnDelete: ExtendedFloatingActionButton = findViewById(R.id.btn_delete)
-        btnDelete.setOnClickListener {
+        val btn_delete: ExtendedFloatingActionButton = findViewById(R.id.btn_delete)
+        btn_delete.setOnClickListener {
 //          setOnClickListener  val builder = AlertDialog.Builder(this)
 //            // Set Alert Title
 //            builder.setTitle("Are you sure you want to delete recipe?")
@@ -53,6 +53,17 @@ class RecipePage : AppCompatActivity() {
             startActivity(intent)
 
             val message = "recipe deleted"
+            val duration = Toast.LENGTH_LONG
+            val toast = Toast.makeText(applicationContext, message, duration)
+            toast.show()
+        }
+
+        val btn_cancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
+        btn_cancel.setOnClickListener {
+            val intent = Intent(this, search_recipes::class.java)
+            startActivity(intent)
+
+            val message = "cancelled"
             val duration = Toast.LENGTH_LONG
             val toast = Toast.makeText(applicationContext, message, duration)
             toast.show()
@@ -88,4 +99,5 @@ class RecipePage : AppCompatActivity() {
             directions.text.toString()
         )
     }
+
 }

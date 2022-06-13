@@ -28,13 +28,7 @@ tools:context=".UpdateRecipe">
         app:layout_constraintTop_toTopOf="parent"/>
 
 
-<ScrollView
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    app:layout_constraintBottom_toBottomOf="parent"
-    app:layout_constraintLeft_toLeftOf="parent"
-    app:layout_constraintRight_toRightOf="parent"
-    app:layout_constraintTop_toTopOf="parent">
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -55,7 +49,13 @@ tools:context=".UpdateRecipe">
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent">
-
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -114,6 +114,7 @@ tools:context=".UpdateRecipe">
                         <com.google.android.material.textfield.TextInputLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
+
                             >
 
                             <com.google.android.material.textfield.TextInputEditText
@@ -123,7 +124,8 @@ tools:context=".UpdateRecipe">
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
                                 android:fontFamily="@font/montserrat_regular"
-                                app:errorEnabled="true" />
+                                app:errorEnabled="true"
+                                android:textColor="@color/white"/>
 
 
                         </com.google.android.material.textfield.TextInputLayout>
@@ -167,7 +169,8 @@ tools:context=".UpdateRecipe">
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
                                 android:fontFamily="@font/montserrat_regular"
-                                app:errorEnabled="true" />
+                                app:errorEnabled="true"
+                                android:textColor="@color/white"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
@@ -203,7 +206,8 @@ tools:context=".UpdateRecipe">
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
                                 android:fontFamily="@font/montserrat_regular"
-                                app:errorEnabled="true" />
+                                app:errorEnabled="true"
+                                android:textColor="@color/white"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
@@ -237,7 +241,8 @@ tools:context=".UpdateRecipe">
                                 android:layout_height="wrap_content"
                                 android:backgroundTint="@color/category_btn"
                                 android:fontFamily="@font/montserrat_regular"
-                                app:errorEnabled="true" />
+                                app:errorEnabled="true"
+                                android:textColor="@color/white"/>
 
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
@@ -273,7 +278,8 @@ tools:context=".UpdateRecipe">
                                 android:backgroundTint="@color/category_btn"
                                 android:inputType="textMultiLine"
                                 android:fontFamily="@font/montserrat_regular"
-                                app:errorEnabled="true" />
+                                app:errorEnabled="true"
+                                android:textColor="@color/white"/>
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
                     <LinearLayout
@@ -307,11 +313,13 @@ tools:context=".UpdateRecipe">
                                 android:backgroundTint="@color/category_btn"
                                 android:inputType="textMultiLine"
                                 android:fontFamily="@font/montserrat_regular"
-                                app:errorEnabled="true" />
+                                app:errorEnabled="true"
+                                android:textColor="@color/white"/>
                         </com.google.android.material.textfield.TextInputLayout>
                     </LinearLayout>
                 </LinearLayout>
             </LinearLayout>
+            </ScrollView>
         </androidx.cardview.widget.CardView>
 
         <LinearLayout
@@ -374,6 +382,6 @@ tools:context=".UpdateRecipe">
                 app:layout_constraintTop_toTopOf="parent"/>
         </LinearLayout>
     </LinearLayout>
-</ScrollView>
+
 
 </LinearLayout>

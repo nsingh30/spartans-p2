@@ -3,6 +3,8 @@ package com.example.recipegenie
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -13,6 +15,10 @@ class FavoritesList : AppCompatActivity() {
     lateinit var mainViewModel: MainViewModel
     lateinit var recipeAdapter: RecipeAdapter
 
+    lateinit var nav_add: View
+    lateinit var nav_search: View
+    lateinit var nav_home: View
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_favorites_list)
@@ -22,7 +28,7 @@ class FavoritesList : AppCompatActivity() {
             getRecipes(recipeList)
         }
 
-        var recyclerView: RecyclerView = findViewById(R.id.recyclerView_favorites_2)
+        var recyclerView: RecyclerView = findViewById(R.id.recyclerView_favorites_card)
 
         recyclerView.layoutManager = LinearLayoutManager(this)
 
@@ -33,10 +39,21 @@ class FavoritesList : AppCompatActivity() {
         // take the views adapter then assign it to the custom adapter we created
         recyclerView.adapter = recipeAdapter
 
-        val btnAdd: FloatingActionButton = findViewById(R.id.btn_add)
-        btnAdd.setOnClickListener() {
+        nav_add = findViewById(R.id.nav_add)
+        nav_add.setOnClickListener() {
             val intent = Intent(this, NewRecipeForm::class.java)
             startActivity(intent)
+        }
+
+        nav_search = findViewById(R.id.nav_search)
+        nav_search.setOnClickListener {
+            val myIntent = Intent(this, search_recipes::class.java)
+            startActivity(myIntent)
+        }
+        nav_home = findViewById(R.id.nav_home)
+        nav_home.setOnClickListener {
+            val myIntent = Intent(this, MainActivity::class.java)
+            startActivity(myIntent)
         }
     }
 

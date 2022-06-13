@@ -20,17 +20,20 @@
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.318" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/drawable/ic_recipe_foreground.xml" value="0.318" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/drawable/search_bar_layout.xml" value="0.2035" />
+        <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/drawable/selector_state.xml" value="0.1" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/drawable/sign_in_btn.xml" value="0.2035" />
+        <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/font/montserrat_bold.xml" value="0.19444444444444445" />
+        <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/font/montserrat_regular.xml" value="0.19444444444444445" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/font/roboto_bold.xml" value="0.20989583333333334" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/layout/activity_favorites_list.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/layout/activity_landing_page.xml" value="0.3333333333333333" />
-        <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/layout/activity_main.xml" value="0.22" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/layout/activity_new_recipe_form.xml" value="0.22" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/layout/activity_recipe_page.xml" value="0.14666666666666667" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/layout/activity_search_recipes.xml" value="0.3333333333333333" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/layout/activity_update_recipe.xml" value="0.22" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/layout/category_card_layout.xml" value="0.35572916666666665" />
-        <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/layout/recipe_list_item_layout.xml" value="0.4466666666666667" />
+        <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/layout/recipe_list_item_layout.xml" value="0.39565217391304347" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/mipmap-anydpi-v26/fav_heart.xml" value="0.318" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/mipmap-anydpi-v26/ic_recipe.xml" value="0.318" />
         <entry key="..\:/Users/corey/AndroidStudioProjects/spartan_p2/spartans-p2/app/src/main/res/mipmap-anydpi-v26/ic_recipe_round.xml" value="0.127" />

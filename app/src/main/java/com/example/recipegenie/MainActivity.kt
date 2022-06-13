@@ -13,6 +13,10 @@ import androidx.recyclerview.widget.RecyclerView
 
 class MainActivity : AppCompatActivity() {
 
+    lateinit var nav_search: View
+    lateinit var nav_home: View
+    lateinit var nav_favorites: View
+
     var recipeList = ArrayList<Recipe>()
 //    var vm = MainViewModel
     lateinit var adapter:RecipeAdapter
@@ -23,12 +27,16 @@ class MainActivity : AppCompatActivity() {
 
 //        vm = MainViewModel(application)
 
+
+
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView_category)
         recyclerView.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL,
             false)
 
         adapter = RecipeAdapter({position -> onCardClick(position)}, recipeList)
         recyclerView.adapter = adapter
+
+
 
 //        vm.allRecipes?.observe(this, {
 //                recipeList -> getRecipe(recipeList)
@@ -41,6 +49,25 @@ class MainActivity : AppCompatActivity() {
 //            val intent = Intent(this, FavoritesList::class.java)
 //            startActivity(intent)
 //        }
+
+        nav_search = findViewById(R.id.nav_search)
+        nav_home = findViewById(R.id.nav_home)
+        nav_favorites = findViewById(R.id.nav_favorites)
+
+        nav_search.setOnClickListener {
+            val myIntent = Intent(this, search_recipes::class.java)
+            startActivity(myIntent)
+        }
+        nav_home.setOnClickListener {
+            val myIntent = Intent(this, MainActivity::class.java)
+            startActivity(myIntent)
+        }
+
+        nav_favorites.setOnClickListener {
+            val myIntent = Intent(this, FavoritesList::class.java)
+            startActivity(myIntent)
+        }
+
     }
 
     fun onCardClick(position: Int) {
@@ -48,6 +75,7 @@ class MainActivity : AppCompatActivity() {
         val myIntent = Intent(this, RecipePage::class.java)
         startActivity(myIntent)
     }
+
 
     fun getRecipe(recipeList: List<Recipe>) {
         this.recipeList.clear()

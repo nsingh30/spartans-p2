@@ -137,6 +137,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/selector_state"
             />
 
     </LinearLayout>
@@ -178,6 +179,7 @@
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="parent"
+            android:background="@drawable/selector_state"
             />
 
 
@@ -194,22 +196,27 @@
         app:layout_constraintTop_toTopOf="parent"
         >
         <ImageView
+            android:id="@+id/nav_search"
             android:layout_width="@dimen/bottom_nav_icons"
             android:layout_height="@dimen/bottom_nav_icons"
             android:src="@drawable/ic_baseline_search_24"
             android:layout_marginRight="@dimen/bottom_nav_icon_margins"
+            android:background="@drawable/selector_state"
             />
         <ImageView
+            android:id="@+id/nav_home"
             android:layout_width="@dimen/bottom_nav_icons"
             android:layout_height="@dimen/bottom_nav_icons"
             android:src="@drawable/ic_baseline_home_24"
+            android:background="@drawable/selector_state"
             />
         <ImageView
+            android:id="@+id/nav_favorites"
             android:layout_width="@dimen/bottom_nav_icons"
             android:layout_height="@dimen/bottom_nav_icons"
             android:src="@drawable/ic_baseline_favorite_24"
             android:layout_marginLeft="@dimen/bottom_nav_icon_margins"
-
+            android:background="@drawable/selector_state"
             />
 
     </LinearLayout>
