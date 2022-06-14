@@ -16,55 +16,56 @@ class NewRecipeForm : AppCompatActivity() {
 
     lateinit var vm: MainViewModel
 
-    private lateinit var title: EditText
-    private lateinit var yields: EditText
-    private lateinit var prepTime: EditText
-    private lateinit var cookTime: EditText
-    private lateinit var ingredients: EditText
-    private lateinit var directions: EditText
+    private lateinit var inputTitle: EditText
+    private lateinit var inputYields: EditText
+    private lateinit var inputPrepTime: EditText
+    private lateinit var inputCookTime: EditText
+    private lateinit var inputIngredients: EditText
+    private lateinit var inputDirections: EditText
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_new_recipe_form)
 
-        title = findViewById(R.id.edit_text_title)
-        yields = findViewById(R.id.edit_text_yield)
-        prepTime = findViewById(R.id.edit_text_prep_time)
-        cookTime = findViewById(R.id.edit_text_cook_time)
-        ingredients = findViewById(R.id.edit_text_ingredients)
-        directions = findViewById(R.id.edit_text_directions)
+        inputTitle = findViewById(R.id.edit_text_title)
+        inputYields = findViewById(R.id.edit_text_yield)
+        inputPrepTime = findViewById(R.id.edit_text_prep_time)
+        inputCookTime = findViewById(R.id.edit_text_cook_time)
+        inputIngredients = findViewById(R.id.edit_text_ingredients)
+        inputDirections = findViewById(R.id.edit_text_directions)
 
         vm = MainViewModel(application)
         val btnSubmit: ExtendedFloatingActionButton = findViewById(R.id.btn_add)
-//        val btnClear: ExtendedFloatingActionButton = findViewById(R.id.btn_clear)
         val btnCancel: ExtendedFloatingActionButton = findViewById(R.id.btn_cancel)
 
 
         btnSubmit.setOnClickListener {
 
-            val title: String = title.text.toString()
-            val yields: String = yields.text.toString()
-            val prepTime: String = prepTime.text.toString()
-            val cookTime: String = cookTime.text.toString()
-            val ingredients: String = ingredients.text.toString()
-            val directions: String = directions.text.toString()
+            val title: String = inputTitle.text.toString()
+            val yields: String = inputYields.text.toString() + "servings"
+            val prepTime: String = inputPrepTime.text.toString() + "minutes"
+            val cookTime: String = inputCookTime.text.toString() + "minutes"
+            val totalTime: String = "${inputPrepTime.toString().toInt() +
+                                     inputCookTime.toString().toInt()} minutes"
+            val ingredients: String = inputIngredients.text.toString()
+            val directions: String = inputDirections.text.toString()
 
             if (title.isNullOrBlank() || yields.isNullOrBlank() || prepTime.isNullOrBlank() ||
                 cookTime.isNullOrBlank() || ingredients.isNullOrBlank() ||
                 directions.isNullOrBlank()
             ) {
                 if (title.isNullOrBlank())
-                    this.title.setError("Please Enter a recipe title")
+                    this.inputTitle.setError("Please Enter a recipe title")
                 if (yields.isNullOrBlank())
-                    this.yields.setError("Please Enter number of servings")
+                    this.inputYields.setError("Please Enter number of servings")
                 if (prepTime.isNullOrBlank())
-                    this.prepTime.setError("Please Enter time it takes to prep ingredients")
+                    this.inputPrepTime.setError("Please Enter time it takes to prep ingredients")
                 if (cookTime.isNullOrBlank())
-                    this.cookTime.setError("Please Enter time it takes to cook")
+                    this.inputCookTime.setError("Please Enter time it takes to cook")
                 if (ingredients.isNullOrBlank())
-                    this.ingredients.setError("Please the ingredient list")
+                    this.inputIngredients.setError("Please the ingredient list")
                 if (directions.isNullOrBlank())
-                    this.directions.setError("Please Enter cooking steps")
+                    this.inputDirections.setError("Please Enter cooking steps")
 
                 val builder = AlertDialog.Builder(this)
                 // Set Alert Title
@@ -80,6 +81,7 @@ class NewRecipeForm : AppCompatActivity() {
 
             } else {
 
+
                 val recipe = Recipe(
                     null,
                     true,
@@ -87,10 +89,10 @@ class NewRecipeForm : AppCompatActivity() {
                     yields,
                     prepTime,
                     cookTime,
-                    prepTime + cookTime, //TODO: need to calculate total time
+                    totalTime,
                     ingredients,
                     directions,
-                    ""
+                    "https://img.buzzfeed.com/thumbnailer-prod-us-east-1/video-api/assets/178761.jpg"
                 )
 
                 vm.insertRecipes(recipe)
@@ -116,10 +118,10 @@ class NewRecipeForm : AppCompatActivity() {
 //            toast.show()
 //        }
 
-        val message = "cancelled"
-        val duration = Toast.LENGTH_LONG
-        val toast = Toast.makeText(applicationContext, message, duration)
-        toast.show()
+//        val message = "cancelled"
+//        val duration = Toast.LENGTH_LONG
+//        val toast = Toast.makeText(applicationContext, message, duration)
+//        toast.show()
     }
 
 //        btnClear.setOnClickListener {

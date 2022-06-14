@@ -83,19 +83,19 @@ class RecipePage : AppCompatActivity() {
         var directions: TextView = findViewById(R.id.directions)
 
         // Get recipe from repo with ID
-        var recipe: List<Recipe> =
-            repo.findRecipeWithTitle(intent.getStringExtra("title").toString())
+//        var recipe: List<Recipe> =
+//            repo.findRecipeWithTitle(intent.getStringExtra("title").toString())
 
         //TODO: Null validation
 
-        // Populate Text Views with recipe fields
-        id.text = recipe[0].recipeId.toString()
-        title.text = recipe[0].title
-        yields.text = recipe[0].yields
-        prepTime.text = recipe[0].prepTime
-        totalTime.text = recipe[0].totalTime
-        ingredients.text = recipe[0].ingredients
-        directions.text = recipe[0].directions
+//        // Populate Text Views with recipe fields
+//        id.text = recipe[0].recipeId.toString()
+//        title.text = recipe[0].title
+//        yields.text = recipe[0].yields
+//        prepTime.text = recipe[0].prepTime
+//        totalTime.text = recipe[0].totalTime
+//        ingredients.text = recipe[0].ingredients
+//        directions.text = recipe[0].directions
 
         //TODO need to calculate cook time and URL
 
