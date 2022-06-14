@@ -4,6 +4,7 @@ This class generates an ArrayList<Recipe> from RecipeResults
  */
 import com.example.recipegenie.model.Recipe
 import com.example.recipegenie.model.RecipeResults
+import com.example.recipegenie.model.Results
 
 class RecipeListGenerator {
 
@@ -13,6 +14,9 @@ class RecipeListGenerator {
             if(!recipeResults.results.isNullOrEmpty()) {
                 var recipe = Recipe(null, false,"","","",
                     "", "", "", "","")
+
+                recipeResults.results = recipeResults.results.filter{it.sections != null} as ArrayList<Results>
+
                 for (index in 0..recipeResults.results.lastIndex) {
                     // ingredients array to String
                     var ingredients = ""
