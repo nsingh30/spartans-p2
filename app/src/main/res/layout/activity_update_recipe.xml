@@ -106,7 +106,7 @@
                                 android:text="@string/card_subtitle_id"
                                 android:textColor="@color/title_color"
                                 android:textSize="@dimen/large_card_id_text"
-                                android:fontFamily="@font/montserrat_bold"/>
+                                android:fontFamily="@font/Montserrat_Bold"/>
 
                             <TextView
                                 android:id="@+id/id"
@@ -115,7 +115,7 @@
                                 android:layout_marginLeft="@dimen/large_card_id_margin"
                                 android:layout_weight="1"
                                 android:text="@string/card_placeholder_text"
-                                android:fontFamily="@font/montserrat_regular"
+                                android:fontFamily="@font/Montserrat_Regular"
                                 android:textColor="@color/white"
                                 android:textSize="@dimen/large_card_id_text" />
 
@@ -148,7 +148,7 @@
                                 android:text="@string/card_title"
                                 android:textColor="@color/title_color"
                                 android:textSize="@dimen/large_card_subtitle_text"
-                                android:fontFamily="@font/montserrat_bold"
+                                android:fontFamily="@font/Montserrat_Bold"
                                 />
                             <com.google.android.material.textfield.TextInputLayout
                                 android:layout_width="match_parent"
@@ -161,7 +161,7 @@
                                     android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/category_btn"
-                                    android:fontFamily="@font/montserrat_regular"
+                                    android:fontFamily="@font/Montserrat_Regular"
                                     app:errorEnabled="true"
                                     android:textColor="@color/white"/>
 
@@ -192,7 +192,7 @@
                                     android:text="@string/card_subtitle_yield"
                                     android:textColor="@color/title_color"
                                     android:textSize="@dimen/large_card_subtitle_text"
-                                    android:fontFamily="@font/montserrat_bold"
+                                    android:fontFamily="@font/Montserrat_Bold"
                                     />
 
                                 <com.google.android.material.textfield.TextInputLayout
@@ -206,7 +206,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="@color/category_btn"
-                                        android:fontFamily="@font/montserrat_regular"
+                                        android:fontFamily="@font/Montserrat_Regular"
                                         app:errorEnabled="true"
                                         android:textColor="@color/white"/>
 
@@ -229,7 +229,7 @@
                                     android:text="@string/card_subtitle_prep"
                                     android:textColor="@color/title_color"
                                     android:textSize="@dimen/large_card_subtitle_text"
-                                    android:fontFamily="@font/montserrat_bold"
+                                    android:fontFamily="@font/Montserrat_Bold"
                                     />
 
                                 <com.google.android.material.textfield.TextInputLayout
@@ -243,7 +243,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="@color/category_btn"
-                                        android:fontFamily="@font/montserrat_regular"
+                                        android:fontFamily="@font/Montserrat_Regular"
                                         app:errorEnabled="true"
                                         android:textColor="@color/white"/>
 
@@ -264,7 +264,7 @@
                                     android:text="@string/card_subtitle_total"
                                     android:textColor="@color/title_color"
                                     android:textSize="@dimen/large_card_subtitle_text"
-                                    android:fontFamily="@font/montserrat_bold"
+                                    android:fontFamily="@font/Montserrat_Bold"
                                     />
 
                                 <com.google.android.material.textfield.TextInputLayout
@@ -278,7 +278,7 @@
                                         android:layout_width="match_parent"
                                         android:layout_height="wrap_content"
                                         android:backgroundTint="@color/category_btn"
-                                        android:fontFamily="@font/montserrat_regular"
+                                        android:fontFamily="@font/Montserrat_Regular"
                                         app:errorEnabled="true"
                                         android:textColor="@color/white"/>
 
@@ -300,7 +300,7 @@
                                 android:text="@string/card_subtitle_ingredients"
                                 android:textColor="@color/title_color"
                                 android:textSize="@dimen/large_card_subtitle_text"
-                                android:fontFamily="@font/montserrat_bold"
+                                android:fontFamily="@font/Montserrat_Bold"
                                 />
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -315,7 +315,7 @@
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/category_btn"
                                     android:inputType="textMultiLine"
-                                    android:fontFamily="@font/montserrat_regular"
+                                    android:fontFamily="@font/Montserrat_Regular"
                                     app:errorEnabled="true"
                                     android:textColor="@color/white"/>
                             </com.google.android.material.textfield.TextInputLayout>
@@ -335,7 +335,7 @@
                                 android:text="@string/card_subtitle_directions"
                                 android:textColor="@color/title_color"
                                 android:textSize="@dimen/large_card_subtitle_text"
-                                android:fontFamily="@font/montserrat_bold"
+                                android:fontFamily="@font/Montserrat_Bold"
                                 />
 
                             <com.google.android.material.textfield.TextInputLayout
@@ -350,7 +350,7 @@
                                     android:layout_height="wrap_content"
                                     android:backgroundTint="@color/category_btn"
                                     android:inputType="textMultiLine"
-                                    android:fontFamily="@font/montserrat_regular"
+                                    android:fontFamily="@font/Montserrat_Regular"
                                     app:errorEnabled="true"
                                     android:textColor="@color/white"/>
                             </com.google.android.material.textfield.TextInputLayout>
@@ -383,7 +383,7 @@
                     android:text="@string/card_btn_update"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/Roboto_Bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
@@ -398,7 +398,7 @@
                     android:text="@string/card_btn_clear"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/Roboto_Bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"
@@ -414,7 +414,7 @@
                     android:text="@string/card_btn_cancel"
                     android:textAlignment="center"
                     android:textColor="@color/white"
-                    android:fontFamily="@font/roboto_bold"
+                    android:fontFamily="@font/Roboto_Bold"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintLeft_toLeftOf="parent"
                     app:layout_constraintRight_toRightOf="parent"

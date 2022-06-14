@@ -69,7 +69,7 @@
                     android:text="@string/card_title"
                     android:textColor="@color/white"
                     android:textSize="@dimen/recipe_item_title_text"
-                    android:fontFamily="@font/roboto_bold"/>
+                    android:fontFamily="@font/Roboto_Bold"/>
 
 
                 <TextView
@@ -81,7 +81,7 @@
                     android:textAlignment="viewEnd"
                     android:textColor="@color/title_color"
                     android:textSize="@dimen/recipe_item_subtitle_text"
-                    android:fontFamily="@font/montserrat_regular"/>
+                    android:fontFamily="@font/Montserrat_Regular"/>
             </LinearLayout>
 
             <LinearLayout
@@ -101,7 +101,7 @@
                 android:text="@string/card_subtitle_total"
                 android:textColor="@color/title_color"
                 android:textSize="@dimen/recipe_item_subtitle_text"
-                android:fontFamily="@font/montserrat_bold"/>
+                android:fontFamily="@font/Montserrat_Bold"/>
                 <TextView
                     android:id="@+id/total_time"
                     android:layout_width="wrap_content"
@@ -111,7 +111,7 @@
                     android:text="@string/card_placeholder_text"
                     android:textColor="@color/white"
                     android:textSize="@dimen/recipe_item_subtitle_text"
-                    android:fontFamily="@font/montserrat_regular"/>
+                    android:fontFamily="@font/Montserrat_Regular"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -128,7 +128,7 @@
                 android:text="@string/card_subtitle_prep"
                 android:textColor="@color/title_color"
                 android:textSize="@dimen/recipe_item_subtitle_text"
-                android:fontFamily="@font/montserrat_bold"/>
+                android:fontFamily="@font/Montserrat_Bold"/>
                 <TextView
                     android:id="@+id/prep_time"
                     android:layout_width="wrap_content"
@@ -138,7 +138,7 @@
                     android:text="@string/card_placeholder_text"
                     android:textColor="@color/white"
                     android:textSize="@dimen/recipe_item_subtitle_text"
-                    android:fontFamily="@font/montserrat_regular"/>
+                    android:fontFamily="@font/Montserrat_Regular"/>
             </LinearLayout>
             <LinearLayout
                 android:layout_width="wrap_content"
@@ -156,7 +156,7 @@
                 android:text="@string/card_subtitle_yield"
                 android:textColor="@color/title_color"
                 android:textSize="@dimen/recipe_item_subtitle_text"
-                android:fontFamily="@font/montserrat_bold"/>
+                android:fontFamily="@font/Montserrat_Bold"/>
                 <TextView
                     android:id="@+id/r_yield"
                     android:layout_width="wrap_content"
@@ -166,7 +166,7 @@
                     android:text="@string/card_placeholder_text"
                     android:textColor="@color/white"
                     android:textSize="@dimen/recipe_item_subtitle_text"
-                    android:fontFamily="@font/montserrat_regular"/>
+                    android:fontFamily="@font/Montserrat_Regular"/>
             </LinearLayout>
             </LinearLayout>
 
