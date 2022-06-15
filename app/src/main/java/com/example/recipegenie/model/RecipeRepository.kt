@@ -15,11 +15,11 @@ class RecipeRepository(context: Context) {
     var searchResults = MutableLiveData<RecipeResults>()
 
     // Gets recipes from API and returns MutableLiveData<RecipeResults>
-    fun getSearchResults(offset: Int, limit: Int, tags: String, search: String) :
+    fun getSearchResults(offset: Int, limit: Int, tags: String, query: String) :
     MutableLiveData<RecipeResults>{
         CoroutineScope(Dispatchers.IO).launch {
 
-            var res = retrofitClient.getSearchResults(offset, limit, tags, search)
+            var res = retrofitClient.getSearchResults(offset, limit, tags, query)
 
             if(res.isSuccessful) {
                 searchResults.postValue(res.body())
